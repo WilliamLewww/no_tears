@@ -1,0 +1,36 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"g++",
+				"C:/Users/William Lew/Desktop/no_tears/main.cpp",
+				"-o",
+				"C:/Users/William Lew/Desktop/no_tears/NoTears",
+				"C:/Users/William Lew/Desktop/no_tears/src/*.cpp",
+				"-IC:/Libraries/glfw-3.3.bin.WIN32/include",
+				"-LC:/Libraries/glfw-3.3.bin.WIN32/lib-mingw-w64",
+				"-IC:/Libraries/glew-2.1.0/include",
+				"-LC:/Libraries/glew-2.1.0/lib/Release/Win32",
+				"-lglew32",
+				"-lglew32s",
+				"-lglfw3",
+				"-lglfw3dll",
+				"-lopengl32",
+				"-lgdi32",
+			],
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+			"name": "NoTears",
+			"selector": "source.c, source.c++",
+			"shell": true,
+			"working_dir": "${file_path}",
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+}
