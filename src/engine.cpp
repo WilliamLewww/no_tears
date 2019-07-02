@@ -5,6 +5,9 @@ void Engine::initialize() {
 	initializeWindow();
 
 	EnumWindows(MatchTargetWindow, 0);
+
+	joiner = Joiner();
+	joiner.initialize();
 }
 
 void Engine::initializeContextGL() {
@@ -49,10 +52,12 @@ void Engine::quit() {
 }
 
 void Engine::update() {
-
+	joiner.update();
 }
 
 void Engine::render() {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	joiner.render();
 }

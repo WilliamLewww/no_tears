@@ -5,9 +5,12 @@
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
 #include "external_context.h"
+#include "joiner.h"
 
 class Engine {
 private:
+	Joiner joiner;
+	
 	const GLFWvidmode* mode;
 	GLFWwindow* window;
 	HWND windowNative;
