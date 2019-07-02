@@ -1,5 +1,4 @@
 #include "src/engine.h"
-#include <iostream>
 
 Engine engine;
 

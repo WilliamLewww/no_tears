@@ -18,9 +18,10 @@ void Engine::initialize() {
 	glfwSetWindowPos(window, 0, 0);
 	glfwMakeContextCurrent(window);
 
-	EnumWindows(MatchTargetWindow,0);
+	windowLong = GetWindowLong(windowNative, GWL_EXSTYLE);
+	SetWindowLong(windowNative, GWL_EXSTYLE, windowLong | WS_EX_TRANSPARENT | WS_EX_LAYERED);
 
-	//SetForegroundWindow(windowNative);
+	EnumWindows(MatchTargetWindow, 0);
 	
 	glewInit();
 }

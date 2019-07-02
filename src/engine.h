@@ -11,6 +11,7 @@ private:
 	const GLFWvidmode* mode;
 	GLFWwindow* window;
 	HWND windowNative;
+	LONG windowLong;
 
 	void update();
 	void render();
