@@ -4,7 +4,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
-#include "external.h"
+#include "external_context.h"
 
 class Engine {
 private:
@@ -15,6 +15,9 @@ private:
 
 	void update();
 	void render();
+
+	void initializeContextGL();
+	void initializeWindow();
 public:
 	void initialize();
 	void start();

@@ -1,6 +1,13 @@
 #include "engine.h"
 
 void Engine::initialize() {
+	initializeContextGL();
+	initializeWindow();
+
+	EnumWindows(MatchTargetWindow, 0);
+}
+
+void Engine::initializeContextGL() {
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -12,6 +19,10 @@ void Engine::initialize() {
 	glfwWindowHint(GLFW_FOCUSED, GLFW_FALSE);
 	glfwWindowHint(GLFW_FOCUS_ON_SHOW, GLFW_FALSE);
 
+	glewInit();
+}
+
+void Engine::initializeWindow() {
 	mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 	window = glfwCreateWindow(mode->width, mode->height, "NoTears", NULL, NULL);
 	windowNative = glfwGetWin32Window(window);
@@ -20,10 +31,6 @@ void Engine::initialize() {
 
 	windowLong = GetWindowLong(windowNative, GWL_EXSTYLE);
 	SetWindowLong(windowNative, GWL_EXSTYLE, windowLong | WS_EX_TRANSPARENT | WS_EX_LAYERED);
-
-	EnumWindows(MatchTargetWindow, 0);
-	
-	glewInit();
 }
 
 void Engine::start() {

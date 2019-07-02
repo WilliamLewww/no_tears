@@ -1,11 +1,11 @@
-#include "external.h"
+#include "external_context.h"
 
 HWND leagueWindow;
 
 COLORREF getPixelGlobal(int x, int y) {
-	HDC dc = GetDC(NULL);
-	COLORREF color = GetPixel(dc, 0, 0);
-	ReleaseDC(NULL, dc);
+	HDC hdc = GetDC(NULL);
+	COLORREF color = GetPixel(hdc, 0, 0);
+	ReleaseDC(NULL, hdc);
 
 	return color;
 }
