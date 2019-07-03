@@ -1,0 +1,10 @@
+#version 430
+layout (location = 0) in vec2 position;
+
+uniform vec2 resolution;
+
+void main() {
+	vec2 updatedPosition = position / resolution;
+	updatedPosition *= 2.0;
+	gl_Position = vec4(updatedPosition * vec2(1, -1),0.0,0.0);
+}

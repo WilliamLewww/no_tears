@@ -5,7 +5,7 @@ class Joiner {
 private:
 	RectangleGL* rectangle;
 public:
-	void initialize();
+	void initialize(Geometry* geometry);
 	void update();
 	void render();
 };

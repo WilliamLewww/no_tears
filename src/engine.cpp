@@ -3,11 +3,14 @@
 void Engine::initialize() {
 	initializeContextGL();
 	initializeWindow();
+	initializeShaderPrograms();
 
 	EnumWindows(MatchTargetWindow, 0);
 
-	joiner = Joiner();
-	joiner.initialize();
+	geometry = new Geometry(&shaderProgramList);
+
+	joiner = new Joiner();
+	joiner->initialize(geometry);
 }
 
 void Engine::initializeContextGL() {
@@ -36,6 +39,12 @@ void Engine::initializeWindow() {
 	SetWindowLong(windowNative, GWL_EXSTYLE, windowLong | WS_EX_TRANSPARENT | WS_EX_LAYERED);
 }
 
+void Engine::initializeShaderPrograms() {
+	std::string vertexShaderString = readShaderSource("../shaders/default.vertex");
+	std::string fragmentShaderString = readShaderSource("../shaders/default.fragment");
+	shaderProgramList.push_back(createShaderProgram(vertexShaderString, fragmentShaderString));
+}
+
 void Engine::start() {
 	while (!glfwWindowShouldClose(window)) {
 		update();
@@ -52,12 +61,47 @@ void Engine::quit() {
 }
 
 void Engine::update() {
-	joiner.update();
+	joiner->update();
 }
 
 void Engine::render() {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	joiner.render();
+	joiner->render();
+}
+
+std::string Engine::readShaderSource(const char* filepath) {
+	std::string content;
+	std::ifstream fileStream(filepath, std::ios::in);
+	std::string line = "";
+
+	while (!fileStream.eof()) {
+		getline(fileStream, line);
+		content.append(line + "\n");
+	}
+	fileStream.close();
+
+	return content;
+}
+
+GLuint Engine::createShaderProgram(std::string vertexShaderString, std::string fragmentShaderString) {
+	const char* vertexShaderSource = vertexShaderString.c_str();
+	const char* fragmentShaderSource = fragmentShaderString.c_str();
+
+	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+
+	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+
+	glCompileShader(vertexShader);
+	glCompileShader(fragmentShader);
+
+	GLuint shaderProgram = glCreateProgram();
+	glAttachShader(shaderProgram, vertexShader);
+	glAttachShader(shaderProgram, fragmentShader);
+	glLinkProgram(shaderProgram);
+
+	return shaderProgram;
 }

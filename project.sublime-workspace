@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"initia",
+				"initialize\t(main.cpp)"
+			],
+			[
+				"extern",
+				"external_context.h\t(external_context.cpp)"
+			],
+			[
 				"GLF",
 				"GLFW_TRUE\tabc"
 			],
@@ -506,62 +514,72 @@
 			[
 				"came",
 				"cameraPosition"
-			],
-			[
-				"clei",
-				"clientY"
-			],
-			[
-				"clie",
-				"clientX"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "main.cpp",
-			"settings":
-			{
-				"buffer_size": 127,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/external.h",
-			"settings":
-			{
-				"buffer_size": 203,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/external.cpp",
-			"settings":
-			{
-				"buffer_size": 744,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/engine.cpp",
-			"settings":
-			{
-				"buffer_size": 1086,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/engine.h",
 			"settings":
 			{
-				"buffer_size": 328,
+				"buffer_size": 448,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/joiner.h",
+			"settings":
+			{
+				"buffer_size": 147,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/joiner.cpp",
+			"settings":
+			{
+				"buffer_size": 214,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/geometry.cpp",
+			"settings":
+			{
+				"buffer_size": 326,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/vector2.h",
+			"settings":
+			{
+				"buffer_size": 55,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/geometry.h",
+			"settings":
+			{
+				"buffer_size": 214,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "project.sublime-project",
+			"settings":
+			{
+				"buffer_size": 749,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -677,11 +695,21 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/William Lew/Desktop/no_tears",
-		"/C/Users/William Lew/Desktop/no_tears/src"
+		"/C/Users/William Lew/Desktop/no_tears"
 	],
 	"file_history":
 	[
+		"/C/Users/William Lew/Desktop/no_tears/src/vector2.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/geometry.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/engine.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/geometry.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/joiner.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/joiner.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/engine.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/main.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/external_context.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/vector2.cpp",
 		"/C/Users/William Lew/Desktop/part 2.txt",
 		"/C/Users/William Lew/Desktop/no_tears/src/external.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/project.sublime-project",
@@ -761,6 +789,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Rectangle",
+			"TestRectangle",
+			"Rectangle",
+			"hwnd",
 			"_color",
 			"color",
 			"_blue",
@@ -784,24 +816,149 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.cpp",
+					"file": "src/engine.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 127,
+						"buffer_size": 448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23,
-								23
+								151,
+								151
+							]
+						],
+						"settings":
+						{
+							"SL.29.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/joiner.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								147,
+								147
+							]
+						],
+						"settings":
+						{
+							"SL.35.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/joiner.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								190
+							]
+						],
+						"settings":
+						{
+							"SL.42.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/geometry.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								289,
+								289
+							]
+						],
+						"settings":
+						{
+							"SL.36.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/vector2.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
 							]
 						],
 						"settings":
@@ -816,53 +973,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/external.h",
+					"buffer": 5,
+					"file": "src/geometry.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 203,
+						"buffer_size": 214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								68,
-								68
+								192,
+								192
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/external.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 744,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"SL.40.region_keys":
+							"SL.38.region_keys":
 							[
 							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
@@ -875,72 +1004,32 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/engine.cpp",
+					"buffer": 6,
+					"file": "project.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1086,
+						"buffer_size": 749,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								712,
-								712
+								191,
+								191
 							]
 						],
 						"settings":
 						{
-							"SL.15.region_keys":
-							[
-							],
-							"SL.36.region_keys":
-							[
-							],
-							"SL.50.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/engine.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 328,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								33,
-								33
-							]
-						],
-						"settings":
-						{
-							"SL.37.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1003,12 +1092,16 @@
 		"selected_items":
 		[
 			[
-				"exter",
-				"src\\external.cpp"
+				"ve",
+				"src\\vector2.h"
 			],
 			[
 				"geo",
-				"server\\client\\src\\geometry.js"
+				"src\\geometry.cpp"
+			],
+			[
+				"exter",
+				"src\\external.cpp"
 			],
 			[
 				"sam",
