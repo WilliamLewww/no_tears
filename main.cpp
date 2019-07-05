@@ -3,9 +3,9 @@
 Engine engine;
 
 int main(void) {
-	engine.initialize();
-	engine.start();
-	engine.quit();
-	
-	return 0;
+    engine.initialize();
+    engine.start();
+    engine.quit();
+    
+    return 0;
 }

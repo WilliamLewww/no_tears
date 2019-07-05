@@ -1,11 +1,14 @@
 #pragma once
-#include "geometry.h"
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 class Joiner {
 private:
-	RectangleGL* rectangle;
+	GLuint vaoHandle;
+	GLuint vboHandles[1];
+	GLuint positionBufferHandle;
 public:
-	void initialize(Geometry* geometry);
+	void initialize();
 	void update();
-	void render();
+	void render(GLuint &shaderProgramHandle);
 };

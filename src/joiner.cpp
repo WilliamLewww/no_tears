@@ -1,14 +1,31 @@
 #include "joiner.h"
 
-void Joiner::initialize(Geometry* geometry) {
-	int color[4] = {255,255,255,255};
-	rectangle = new RectangleGL(geometry, {0,0}, 25, 25, color);
+float positionData[] = {
+    -0.8f, -0.8f,
+     0.8f, -0.8f,
+     0.0f,  0.8f
+};
+
+void Joiner::initialize() {
+   	glGenBuffers(1, vboHandles);
+    positionBufferHandle = vboHandles[0];
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positionData, GL_STATIC_DRAW);
+
+    glGenVertexArrays(1, &vaoHandle);
+    glBindVertexArray(vaoHandle);
+    glEnableVertexAttribArray(0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, NULL);
 }
 
 void Joiner::update() {
 
 }
 
-void Joiner::render() {
-	rectangle->render();
+void Joiner::render(GLuint &shaderProgramHandle) {
+	glUseProgram(shaderProgramHandle);
+    glBindVertexArray(vaoHandle);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 }
