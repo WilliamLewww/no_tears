@@ -9,7 +9,7 @@ class Joiner {
 private:
 	RectangleBasic* rectangle;
 public:
-	void initialize(GLuint *shaderProgramHandle);
+	void initialize(GLuint* shaderProgramHandle);
 	void update();
 	void render();
 };
