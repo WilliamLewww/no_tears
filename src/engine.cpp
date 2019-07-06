@@ -6,13 +6,14 @@ void Engine::initialize() {
     glewInit();
 
     EnumWindows(MatchTargetWindow, 0);
+    setupResoultion(mode->width, mode->height);
 
     std::string vertexShaderString = readShaderSource("shaders/basic.vertex");
     std::string fragmentShaderString = readShaderSource("shaders/basic.fragment");
     shaderProgramHandle = createShaderProgram(vertexShaderString, fragmentShaderString);
 
     joiner = new Joiner();
-    joiner->initialize();
+    joiner->initialize(&shaderProgramHandle);
 }
 
 void Engine::initializeContextGL() { 
@@ -59,7 +60,7 @@ void Engine::render() {
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-   	joiner->render(shaderProgramHandle);
+   	joiner->render();
 }
 
 std::string Engine::readShaderSource(const char* filepath) {

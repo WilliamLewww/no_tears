@@ -1,5 +1,6 @@
 #include "external_context.h"
 
+glm::vec2 resolution;
 HWND leagueWindow;
 
 COLORREF getPixelGlobal(int x, int y) {
@@ -29,4 +30,8 @@ BOOL CALLBACK MatchTargetWindow(HWND hwnd, LPARAM lParam) {
 	}
 	
 	return true;
+}
+
+void setupResoultion(int screenWidth, int screenHeight) {
+	resolution = glm::vec2(screenWidth, screenHeight);
 }
