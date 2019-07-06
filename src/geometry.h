@@ -17,12 +17,11 @@ private:
 	GLuint colorLocationHandle;
 	GLuint resolutionLocationHandle;
 
-	float vertexData[12];
 	glm::vec4 color;
 
 	GLuint* shaderProgramHandle;
 
-	void setPositionData();
+	float* getPositionVertexData();
 public:
 	void initialize(GLuint* shaderProgramHandle, Vector2 position, int width, int height);
 	void render();
