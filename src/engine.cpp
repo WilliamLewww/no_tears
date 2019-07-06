@@ -38,12 +38,20 @@ void Engine::initializeWindow() {
 }
 
 void Engine::start() {
+    static float frameStart = glfwGetTime(), frameEnd = glfwGetTime(), deltaTime = 0.0f;
     while (!glfwWindowShouldClose(window)) {
-        update();
+        frameStart = glfwGetTime();
+        deltaTime = frameStart - frameEnd;
+
+        while (deltaTime < 0.01666f) {
+            frameStart = glfwGetTime();
+            deltaTime = frameStart - frameEnd;
+        }
+
+        update(deltaTime);
         render();
 
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        frameEnd = frameStart;
     }
 }
 
@@ -52,8 +60,9 @@ void Engine::quit() {
     glfwTerminate();
 }
 
-void Engine::update() {
-	joiner->update();
+void Engine::update(float elapsedTimeS) {
+    glfwPollEvents();
+	joiner->update(elapsedTimeS);
 }
 
 void Engine::render() {
@@ -61,6 +70,8 @@ void Engine::render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
    	joiner->render();
+
+    glfwSwapBuffers(window);
 }
 
 std::string Engine::readShaderSource(const char* filepath) {

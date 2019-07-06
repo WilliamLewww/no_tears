@@ -11,13 +11,13 @@ private:
 	Vector2 position;
 	int width, height;
 
+	glm::vec4 color;
+	
 	GLuint vaoHandle;
 	GLuint vboHandles[1];
 	GLuint positionBufferHandle;
 	GLuint colorLocationHandle;
 	GLuint resolutionLocationHandle;
-
-	glm::vec4 color;
 
 	GLuint* shaderProgramHandle;
 

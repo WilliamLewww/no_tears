@@ -10,6 +10,6 @@ private:
 	RectangleBasic* rectangle;
 public:
 	void initialize(GLuint* shaderProgramHandle);
-	void update();
+	void update(float elapsedTimeS);
 	void render();
 };

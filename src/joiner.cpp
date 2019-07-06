@@ -5,7 +5,7 @@ void Joiner::initialize(GLuint* shaderProgramHandle) {
     rectangle->initialize(shaderProgramHandle, {0,0}, 50, 50);
 }
 
-void Joiner::update() {
+void Joiner::update(float elapsedTimeS) {
 
 }
 

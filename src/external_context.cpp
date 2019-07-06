@@ -1,5 +1,6 @@
 #include "external_context.h"
 
+int screenWidth, screenHeight;
 glm::vec2 resolution;
 HWND leagueWindow;
 
@@ -32,6 +33,9 @@ BOOL CALLBACK MatchTargetWindow(HWND hwnd, LPARAM lParam) {
 	return true;
 }
 
-void setupResoultion(int screenWidth, int screenHeight) {
-	resolution = glm::vec2(screenWidth, screenHeight);
+void setupResoultion(int screenWidthArg, int screenHeightArg) {
+	screenWidth = screenWidthArg;
+	screenHeight = screenHeightArg;
+	
+	resolution = glm::vec2(screenWidthArg, screenHeightArg);
 }

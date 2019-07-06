@@ -24,7 +24,7 @@ private:
 	void initializeContextGL();
 	void initializeWindow();
 
-	void update();
+	void update(float elapsedTimeS);
 	void render();
 
 	std::string readShaderSource(const char* filepath);

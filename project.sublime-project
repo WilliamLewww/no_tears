@@ -22,11 +22,11 @@
 				"-lgdi32",
 				"-std=c++17",
 			],
+			"working_dir": "C:/Users/William Lew/Desktop/no_tears",
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
 			"name": "NoTears",
 			"selector": "source.c, source.c++",
 			"shell": true,
-			"working_dir": "${file_path}",
 		}
 	],
 	"folders":
