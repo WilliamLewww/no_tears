@@ -21,6 +21,9 @@ private:
 
 	GLuint shaderProgramHandle;
 
+	void initializeContextGL();
+	void initializeWindow();
+
 	void update();
 	void render();
 

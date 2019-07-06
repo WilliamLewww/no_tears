@@ -18,6 +18,8 @@ void Joiner::initialize() {
 
     glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, NULL);
+
+    color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 }
 
 void Joiner::update() {
@@ -26,6 +28,10 @@ void Joiner::update() {
 
 void Joiner::render(GLuint &shaderProgramHandle) {
 	glUseProgram(shaderProgramHandle);
+
+	colorLocationHandle = glGetUniformLocation(shaderProgramHandle, "color");
+	glUniform4fv(colorLocationHandle, 1, glm::value_ptr(color));
+
     glBindVertexArray(vaoHandle);
     glDrawArrays(GL_TRIANGLES, 0, 3);
 }

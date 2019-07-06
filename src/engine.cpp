@@ -1,14 +1,31 @@
 #include "engine.h"
 
 void Engine::initialize() {
-    glfwInit();
+	initializeContextGL();
+	initializeWindow();
+    glewInit();
+
+    EnumWindows(MatchTargetWindow, 0);
+
+    std::string vertexShaderString = readShaderSource("shaders/basic.vertex");
+    std::string fragmentShaderString = readShaderSource("shaders/basic.fragment");
+    shaderProgramHandle = createShaderProgram(vertexShaderString, fragmentShaderString);
+
+    joiner = new Joiner();
+    joiner->initialize();
+}
+
+void Engine::initializeContextGL() { 
+	glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
     glfwWindowHint(GLFW_FLOATING, GLFW_TRUE);
     glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GLFW_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+}
 
+void Engine::initializeWindow() {
     mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     window = glfwCreateWindow(mode->width, mode->height, "NoTears", NULL, NULL);
     windowNative = glfwGetWin32Window(window);
@@ -17,17 +34,6 @@ void Engine::initialize() {
 
     windowLong = GetWindowLong(windowNative, GWL_EXSTYLE);
     SetWindowLong(windowNative, GWL_EXSTYLE, windowLong | WS_EX_TRANSPARENT | WS_EX_LAYERED);
-
-    glewInit();
-
-    std::string vertexShaderString = readShaderSource("shaders/basic.vertex");
-    std::string fragmentShaderString = readShaderSource("shaders/basic.fragment");
-    shaderProgramHandle = createShaderProgram(vertexShaderString, fragmentShaderString);
-
-    EnumWindows(MatchTargetWindow, 0);
-
-    joiner = new Joiner();
-    joiner->initialize();
 }
 
 void Engine::start() {
