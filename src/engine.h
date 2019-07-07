@@ -1,6 +1,8 @@
 #define GLFW_EXPOSE_NATIVE_WIN32
 
 #pragma once
+#include <stdlib.h>
+#include <time.h>
 #include <string>
 #include <iostream>
 #include <fstream>

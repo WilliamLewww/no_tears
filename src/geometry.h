@@ -8,11 +8,10 @@
 
 class RectangleBasic {
 private:
-	Vector2 position;
 	int width, height;
 
 	glm::vec4 color;
-	
+
 	GLuint vaoHandle;
 	GLuint vboHandles[1];
 	GLuint positionBufferHandle;
@@ -23,6 +22,12 @@ private:
 
 	float* getPositionVertexData();
 public:
+	Vector2 position;
+
+	inline void setColor(int r, int g, int b, int a) {
+		color = glm::vec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f);
+	}
+
 	void initialize(GLuint* shaderProgramHandle, Vector2 position, int width, int height);
 	void render();
 };

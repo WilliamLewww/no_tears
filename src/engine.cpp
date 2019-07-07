@@ -1,6 +1,8 @@
 #include "engine.h"
 
 void Engine::initialize() {
+    srand (time(NULL));
+    
 	initializeContextGL();
 	initializeWindow();
     glewInit();
@@ -42,11 +44,6 @@ void Engine::start() {
     while (!glfwWindowShouldClose(window)) {
         frameStart = glfwGetTime();
         deltaTime = frameStart - frameEnd;
-
-        while (deltaTime < 0.01666f) {
-            frameStart = glfwGetTime();
-            deltaTime = frameStart - frameEnd;
-        }
 
         update(deltaTime);
         render();
