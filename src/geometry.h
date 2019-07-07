@@ -15,8 +15,9 @@ private:
 	GLuint vaoHandle;
 	GLuint vboHandles[1];
 	GLuint positionBufferHandle;
-	GLuint colorLocationHandle;
+
 	GLuint resolutionLocationHandle;
+	GLuint colorLocationHandle;
 
 	GLuint* shaderProgramHandle;
 
@@ -29,5 +30,29 @@ public:
 	}
 
 	void initialize(GLuint* shaderProgramHandle, Vector2 position, int width, int height);
+	void render();
+};
+
+class RectangleTextured {
+private:
+	int width, height;
+	GLuint* textureHandle;
+
+	GLuint vaoHandle;
+	GLuint vboHandles[2];
+	GLuint positionBufferHandle;
+	GLuint textureBufferHandle;
+
+	GLuint resolutionLocationHandle;
+	GLuint textureSamplerLocationHandle;
+
+	GLuint* shaderProgramHandle;
+
+	float* getPositionVertexData();
+	float* getTextureVertexData();
+public:
+	Vector2 position;
+
+	void initialize(GLuint* shaderProgramHandle, GLuint* textureHandle, Vector2 position, int width, int height);
 	void render();
 };

@@ -1,0 +1,12 @@
+#version 460
+
+out vec4 FragColor;
+
+uniform vec2 resolution;
+uniform sampler2D textureSampler;
+
+varying vec2 v_texture;
+
+void main() {
+	FragColor = texture2D(textureSampler, v_texture);
+}

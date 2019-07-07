@@ -39,11 +39,18 @@ void Engine::initializeWindow() {
 }
 
 void Engine::initializeShaders() {
-    shaderProgramHandleArray = new GLuint[1];
+    shaderProgramHandleArray = new GLuint[2];
 
-    std::string vertexShaderString = readShaderSource("shaders/basic.vertex");
-    std::string fragmentShaderString = readShaderSource("shaders/basic.fragment");
+    std::string vertexShaderString;
+    std::string fragmentShaderString;
+
+    vertexShaderString = readShaderSource("shaders/basic.vertex");
+    fragmentShaderString = readShaderSource("shaders/basic.fragment");
     shaderProgramHandleArray[0] = createShaderProgram(vertexShaderString, fragmentShaderString);
+
+    vertexShaderString = readShaderSource("shaders/textured.vertex");
+    fragmentShaderString = readShaderSource("shaders/textured.fragment");
+    shaderProgramHandleArray[1] = createShaderProgram(vertexShaderString, fragmentShaderString);
 }
 
 void Engine::initializeTextures() {
