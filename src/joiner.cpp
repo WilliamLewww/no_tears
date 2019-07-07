@@ -5,7 +5,7 @@ const int rectangleCount = 250;
 float velocityXList[rectangleCount];
 float velocityYList[rectangleCount];
 
-void Joiner::initialize(GLuint** shaderProgramHandleArray) {
+void Joiner::initialize(GLuint** shaderProgramHandleArray, GLuint** textureHandleArray) {
     rectangleList = new RectangleBasic[rectangleCount];
     for (int x = 0; x < rectangleCount; x++) {
     	rectangleList[x].initialize(shaderProgramHandleArray[0], {(float)(rand() % 1871), (float)(rand() % 1031)}, 50, 50);

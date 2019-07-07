@@ -14,7 +14,7 @@ void Engine::initialize() {
     initializeTextures();
 
     joiner = new Joiner();
-    joiner->initialize(&shaderProgramHandleArray);
+    joiner->initialize(&shaderProgramHandleArray, &textureHandleArray);
 }
 
 void Engine::initializeContextGL() { 
