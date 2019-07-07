@@ -14,25 +14,31 @@
 				"-IC:/Libraries/glew-2.1.0/include",
 				"-LC:/Libraries/glew-2.1.0/lib/Release/Win32",
 				"-IC:/Libraries/glm",
+				"-LC:/Libraries/soil/lib",
+				"-IC:/Libraries/soil/src",
+				"-lsoil",
 				"-lglew32",
 				"-lglew32s",
 				"-lglfw3",
 				"-lglfw3dll",
 				"-lopengl32",
 				"-lgdi32",
-				"-std=c++17",
+				"-std=c++17"
 			],
-			"working_dir": "C:/Users/William Lew/Desktop/no_tears",
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
 			"name": "NoTears",
 			"selector": "source.c, source.c++",
 			"shell": true,
+			"working_dir": "C:/Users/William Lew/Desktop/no_tears"
 		}
 	],
 	"folders":
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "C:\\Users\\William Lew\\Downloads"
 		}
 	]
 }

@@ -5,17 +5,17 @@ const int rectangleCount = 250;
 float velocityXList[rectangleCount];
 float velocityYList[rectangleCount];
 
-void Joiner::initialize(GLuint* shaderProgramHandle) {
+void Joiner::initialize(GLuint** shaderProgramHandleArray) {
     rectangleList = new RectangleBasic[rectangleCount];
     for (int x = 0; x < rectangleCount; x++) {
-    	rectangleList[x].initialize(shaderProgramHandle, {(float)(rand() % 1871), (float)(rand() % 1031)}, 50, 50);
+    	rectangleList[x].initialize(shaderProgramHandleArray[0], {(float)(rand() % 1871), (float)(rand() % 1031)}, 50, 50);
     	rectangleList[x].setColor(rand() % 256, rand() % 256, rand() % 256, (rand() % 2 == 0) ? 50 : 255);
     	
-    	if (rand() % 2 == 0) { velocityXList[x] = -(((rand() % 11) / 10.0f) + 0.01); }
-    	else { velocityXList[x] = (((rand() % 11) / 10.0f) + 0.01); }
+    	if (rand() % 2 == 0) { velocityXList[x] = -(((rand() % 11) / 10.0f) + 0.1f); }
+    	else { velocityXList[x] = (((rand() % 11) / 10.0f) + 0.1f); }
 
-    	if (rand() % 2 == 0) { velocityYList[x] = -(((rand() % 11) / 10.0f) + 0.01); }
-    	else { velocityYList[x] = (((rand() % 11) / 10.0f) + 0.01); }
+    	if (rand() % 2 == 0) { velocityYList[x] = -(((rand() % 11) / 10.0f) + 0.1f); }
+    	else { velocityYList[x] = (((rand() % 11) / 10.0f) + 0.1f); }
     }
 }
 
@@ -37,4 +37,8 @@ void Joiner::render() {
 	for (int x = 0; x < rectangleCount; x++) {
     	rectangleList[x].render();
 	}
+}
+
+void Joiner::quit() {
+	delete [] rectangleList;
 }

@@ -10,12 +10,11 @@ void Engine::initialize() {
     EnumWindows(MatchTargetWindow, 0);
     setupResoultion(mode->width, mode->height);
 
-    std::string vertexShaderString = readShaderSource("shaders/basic.vertex");
-    std::string fragmentShaderString = readShaderSource("shaders/basic.fragment");
-    shaderProgramHandle = createShaderProgram(vertexShaderString, fragmentShaderString);
+    initializeShaders();
+    initializeTextures();
 
     joiner = new Joiner();
-    joiner->initialize(&shaderProgramHandle);
+    joiner->initialize(&shaderProgramHandleArray);
 }
 
 void Engine::initializeContextGL() { 
@@ -39,6 +38,27 @@ void Engine::initializeWindow() {
     SetWindowLong(windowNative, GWL_EXSTYLE, windowLong | WS_EX_TRANSPARENT | WS_EX_LAYERED);
 }
 
+void Engine::initializeShaders() {
+    shaderProgramHandleArray = new GLuint[1];
+
+    std::string vertexShaderString = readShaderSource("shaders/basic.vertex");
+    std::string fragmentShaderString = readShaderSource("shaders/basic.fragment");
+    shaderProgramHandleArray[0] = createShaderProgram(vertexShaderString, fragmentShaderString);
+}
+
+void Engine::initializeTextures() {
+    textureHandleArray = new GLuint[1];
+
+    int imageWidth, imageHeight;
+    unsigned char* image = SOIL_load_image("src/harambe.png", &imageWidth, &imageHeight, 0, SOIL_LOAD_AUTO);
+    
+    glGenTextures(1, &textureHandleArray[0]);
+    glBindTexture(GL_TEXTURE_2D, textureHandleArray[0]);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, imageWidth, imageHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
+
+    SOIL_free_image_data(image);
+}
+
 void Engine::start() {
     static float frameStart = glfwGetTime(), frameEnd = glfwGetTime(), deltaTime = 0.0f;
     while (!glfwWindowShouldClose(window)) {
@@ -53,6 +73,12 @@ void Engine::start() {
 }
 
 void Engine::quit() {
+    joiner->quit();
+    delete joiner;
+
+    delete [] shaderProgramHandleArray;
+    delete [] textureHandleArray;
+
     glfwDestroyWindow(window);
     glfwTerminate();
 }

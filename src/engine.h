@@ -9,6 +9,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
+#include <SOIL.h>
 #include "external_context.h"
 #include "joiner.h"
 
@@ -21,10 +22,13 @@ private:
 	HWND windowNative;
 	LONG windowLong;
 
-	GLuint shaderProgramHandle;
+	GLuint* shaderProgramHandleArray;
+	GLuint* textureHandleArray;
 
 	void initializeContextGL();
 	void initializeWindow();
+	void initializeShaders();
+	void initializeTextures();
 
 	void update(float elapsedTimeS);
 	void render();
