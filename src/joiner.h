@@ -7,7 +7,7 @@
 
 class Joiner {
 private:
-	RectangleTextured* rectangle;
+	RectangleTextured* rectangleList;
 public:
 	void initialize(GLuint* shaderProgramHandleArray, GLuint* textureHandleArray);
 	void update(float elapsedTimeS);
