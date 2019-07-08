@@ -1,11 +1,31 @@
 #include "engine.h"
 
+void GLAPIENTRY
+MessageCallback( GLenum source,
+                 GLenum type,
+                 GLuint id,
+                 GLenum severity,
+                 GLsizei length,
+                 const GLchar* message,
+                 const void* userParam )
+{
+  fprintf( stderr, "GL CALLBACK: %s type = 0x%x, severity = 0x%x, message = %s\n\n",
+           ( type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : "" ),
+            type, severity, message );
+}
+
 void Engine::initialize() {
     srand (time(NULL));
     
 	initializeContextGL();
 	initializeWindow();
     glewInit();
+
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    glEnable(GL_DEBUG_OUTPUT);
+    glDebugMessageCallback(MessageCallback, 0);
 
     EnumWindows(MatchTargetWindow, 0);
     setupResoultion(mode->width, mode->height);
@@ -14,7 +34,7 @@ void Engine::initialize() {
     initializeTextures();
 
     joiner = new Joiner();
-    joiner->initialize(&shaderProgramHandleArray, &textureHandleArray);
+    joiner->initialize(shaderProgramHandleArray, textureHandleArray);
 }
 
 void Engine::initializeContextGL() { 
@@ -57,10 +77,13 @@ void Engine::initializeTextures() {
     textureHandleArray = new GLuint[1];
 
     int imageWidth, imageHeight;
-    unsigned char* image = SOIL_load_image("src/harambe.png", &imageWidth, &imageHeight, 0, SOIL_LOAD_AUTO);
-    
+    unsigned char* image = SOIL_load_image("res/harambe.png", &imageWidth, &imageHeight, 0, SOIL_LOAD_AUTO);
+
     glGenTextures(1, &textureHandleArray[0]);
     glBindTexture(GL_TEXTURE_2D, textureHandleArray[0]);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, imageWidth, imageHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
 
     SOIL_free_image_data(image);

@@ -19,7 +19,7 @@ private:
 	GLuint resolutionLocationHandle;
 	GLuint colorLocationHandle;
 
-	GLuint* shaderProgramHandle;
+	GLuint shaderProgramHandle;
 
 	float* getPositionVertexData();
 public:
@@ -29,14 +29,14 @@ public:
 		color = glm::vec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f);
 	}
 
-	void initialize(GLuint* shaderProgramHandle, Vector2 position, int width, int height);
+	void initialize(GLuint shaderProgramHandle, Vector2 position, int width, int height);
 	void render();
 };
 
 class RectangleTextured {
 private:
 	int width, height;
-	GLuint* textureHandle;
+	GLuint textureHandle;
 
 	GLuint vaoHandle;
 	GLuint vboHandles[2];
@@ -46,13 +46,13 @@ private:
 	GLuint resolutionLocationHandle;
 	GLuint textureSamplerLocationHandle;
 
-	GLuint* shaderProgramHandle;
+	GLuint shaderProgramHandle;
 
 	float* getPositionVertexData();
 	float* getTextureVertexData();
 public:
 	Vector2 position;
 
-	void initialize(GLuint* shaderProgramHandle, GLuint* textureHandle, Vector2 position, int width, int height);
+	void initialize(GLuint shaderProgramHandle, GLuint textureHandle, Vector2 position, int width, int height);
 	void render();
 };

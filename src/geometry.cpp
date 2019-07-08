@@ -1,6 +1,6 @@
 #include "geometry.h"
 
-void RectangleBasic::initialize(GLuint* shaderProgramHandle, Vector2 position, int width, int height) {
+void RectangleBasic::initialize(GLuint shaderProgramHandle, Vector2 position, int width, int height) {
 	this->shaderProgramHandle = shaderProgramHandle;
 	this->position = position;
 	this->width = width;
@@ -13,12 +13,12 @@ void RectangleBasic::initialize(GLuint* shaderProgramHandle, Vector2 position, i
 
     positionBufferHandle = vboHandles[0];
 
-	resolutionLocationHandle = glGetUniformLocation(*shaderProgramHandle, "resolution");
-    colorLocationHandle = glGetUniformLocation(*shaderProgramHandle, "color");
+	resolutionLocationHandle = glGetUniformLocation(shaderProgramHandle, "resolution");
+    colorLocationHandle = glGetUniformLocation(shaderProgramHandle, "color");
 }
 
 void RectangleBasic::render() {
-	glUseProgram(*shaderProgramHandle);
+	glUseProgram(shaderProgramHandle);
 	glBindVertexArray(vaoHandle);
 
 	glEnableVertexAttribArray(0);
@@ -44,7 +44,7 @@ float* RectangleBasic::getPositionVertexData() {
 	return vertexData;
 }
 
-void RectangleTextured::initialize(GLuint* shaderProgramHandle, GLuint* textureHandle, Vector2 position, int width, int height) {
+void RectangleTextured::initialize(GLuint shaderProgramHandle, GLuint textureHandle, Vector2 position, int width, int height) {
 	this->shaderProgramHandle = shaderProgramHandle;
 	this->textureHandle = textureHandle;
 	
@@ -58,12 +58,12 @@ void RectangleTextured::initialize(GLuint* shaderProgramHandle, GLuint* textureH
     positionBufferHandle = vboHandles[0];
     textureBufferHandle = vboHandles[1];
 
-	resolutionLocationHandle = glGetUniformLocation(*shaderProgramHandle, "resolution");
-	textureSamplerLocationHandle = glGetUniformLocation(*shaderProgramHandle, "textureSampler");
+	resolutionLocationHandle = glGetUniformLocation(shaderProgramHandle, "resolution");
+	textureSamplerLocationHandle = glGetUniformLocation(shaderProgramHandle, "u_texture");
 }
 
 void RectangleTextured::render() {
-	glUseProgram(*shaderProgramHandle);
+	glUseProgram(shaderProgramHandle);
 	glBindVertexArray(vaoHandle);
 
 	glEnableVertexAttribArray(0);
@@ -74,11 +74,9 @@ void RectangleTextured::render() {
 	glEnableVertexAttribArray(1);
 	glBindBuffer(GL_ARRAY_BUFFER, textureBufferHandle);
 	glBufferData(GL_ARRAY_BUFFER, 12 * sizeof(float), getTextureVertexData(), GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, NULL);
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, NULL);
 
 	glUniform2fv(resolutionLocationHandle, 1, glm::value_ptr(resolution));
-
-	glBindTexture(GL_TEXTURE_2D, *textureHandle);
 	glUniform1i(textureSamplerLocationHandle, 0);
 
     glDrawArrays(GL_TRIANGLES, 0, 6);
@@ -98,12 +96,12 @@ float* RectangleTextured::getPositionVertexData() {
 
 float* RectangleTextured::getTextureVertexData() {
 	static float vertexData[12];
-	vertexData[0] = 0; 		vertexData[1] = 0;
-	vertexData[2] = 1; 		vertexData[3] = 0;
-	vertexData[4] = 0;		vertexData[5] = 1;
-	vertexData[6] = 0;		vertexData[7] = 1;
-	vertexData[8] = 1; 		vertexData[9] = 0;
-	vertexData[10] = 1; 	vertexData[11] = 1;
+	vertexData[0] = 0.0f; 		vertexData[1] = 0.0f;
+	vertexData[2] = 1.0f; 		vertexData[3] = 0.0f;
+	vertexData[4] = 0.0f;		vertexData[5] = 1.0f;
+	vertexData[6] = 0.0f;		vertexData[7] = 1.0f;
+	vertexData[8] = 1.0f; 		vertexData[9] = 0.0f;
+	vertexData[10] = 1.0f; 		vertexData[11] = 1.0f;
 
 	return vertexData;
 }

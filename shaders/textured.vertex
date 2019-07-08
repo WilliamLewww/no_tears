@@ -4,9 +4,8 @@ layout (location = 0) in vec2 a_position;
 layout (location = 1) in vec2 a_texture;
 
 uniform vec2 resolution;
-uniform sampler2D textureSampler;
 
-varying vec2 v_texture;
+out vec2 v_texture;
 
 void main() {
 	vec2 tempPosition = ((a_position / resolution) * 2.0f) - 1.0f;

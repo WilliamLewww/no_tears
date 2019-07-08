@@ -4,6 +4,106 @@
 		"selected_items":
 		[
 			[
+				"Rec",
+				"RectangleBasic\t(joiner.cpp)"
+			],
+			[
+				"Recta",
+				"RectangleBasic\t(geometry.h)"
+			],
+			[
+				"sahder",
+				"shaderProgramHandleArray\tabc"
+			],
+			[
+				"initi",
+				"initialize\tabc"
+			],
+			[
+				"image",
+				"imageWidth\tabc"
+			],
+			[
+				"shader",
+				"shaderProgramHandleArray\tabc"
+			],
+			[
+				"sha",
+				"shaderProgramHandleArray\tabc"
+			],
+			[
+				"textureHa",
+				"textureHandle\tabc"
+			],
+			[
+				"rectan",
+				"rectangleT\tabc"
+			],
+			[
+				"recta",
+				"rectangleT\tabc"
+			],
+			[
+				"Rect",
+				"RectangleTextured\t(joiner.h)"
+			],
+			[
+				"textureH",
+				"textureHandleArray\tabc"
+			],
+			[
+				"textureHan",
+				"textureHandleArray\t(engine.cpp)"
+			],
+			[
+				"textu",
+				"textureSamplerLocationHandle\tabc"
+			],
+			[
+				"Rectan",
+				"RectangleTextured\t(geometry.h)"
+			],
+			[
+				"initia",
+				"initialize\tabc"
+			],
+			[
+				"shaderPr",
+				"shaderProgramHandle\tabc"
+			],
+			[
+				"fragme",
+				"fragmentShaderString\tabc"
+			],
+			[
+				"screen",
+				"screenWidth\tabc"
+			],
+			[
+				"velo",
+				"velocityYList\tabc"
+			],
+			[
+				"vel",
+				"velocityYList\tabc"
+			],
+			[
+				"veloc",
+				"velocityYList\tabc"
+			],
+			[
+				"frame",
+				"frameEnd\tabc"
+			],
+			[
+				"rec",
+				"rectanglePosition\tabc"
+			],
+			[
+				"screenH",
+				"screenHeightArg\tabc"
+			],
+			[
 				"posit",
 				"position\tabc"
 			],
@@ -36,10 +136,6 @@
 				"screenHeightArg\tabc"
 			],
 			[
-				"screen",
-				"screenWidthArg\tabc"
-			],
-			[
 				"scree",
 				"screenHeight\t(external_context.h)"
 			],
@@ -52,16 +148,8 @@
 				"external_context.h\t(engine.h)"
 			],
 			[
-				"shader",
-				"shaderProgramHandle\tabc"
-			],
-			[
 				"sah",
 				"shaderProgramHandle\t(joiner.cpp)"
-			],
-			[
-				"sahder",
-				"shaderProgramHandle\tabc"
 			],
 			[
 				"shaderP",
@@ -78,10 +166,6 @@
 			[
 				"initial",
 				"initializeWindow\t(engine.cpp)"
-			],
-			[
-				"initia",
-				"initializeWindow\tabc"
 			],
 			[
 				"fragm",
@@ -284,10 +368,6 @@
 				"getRectangleSizeFromList\t(network.js)"
 			],
 			[
-				"rectan",
-				"rectangleList\tabc"
-			],
-			[
 				"setC",
 				"setComponentBuffer\t(joiner.js)"
 			],
@@ -424,14 +504,6 @@
 				"rectangleBuffer\tabc"
 			],
 			[
-				"Recta",
-				"RectangleMult\t(geometry.js)"
-			],
-			[
-				"Rec",
-				"RectangleMult\t(geometry.js)"
-			],
-			[
 				"uni",
 				"uniform4fv\tabc"
 			],
@@ -442,106 +514,61 @@
 			[
 				"unifo",
 				"uniform1f\tabc"
-			],
-			[
-				"cameraP",
-				"cameraPositionLocation\tabc"
-			],
-			[
-				"unif",
-				"uniform2f\tabc"
-			],
-			[
-				"pro",
-				"program\tabc"
-			],
-			[
-				"cameraPo",
-				"cameraPositionLocation\tabc"
-			],
-			[
-				"resoul",
-				"resolution\tabc"
-			],
-			[
-				"pr",
-				"program\tabc"
-			],
-			[
-				"cameraPosi",
-				"cameraPositionLocation\tabc"
-			],
-			[
-				"SHADERP",
-				"SHADER_PROGRAMS"
-			],
-			[
-				"from-",
-				"from-database-div\t(index.html)"
-			],
-			[
-				"recently-ge",
-				"recently-generated-div\t(index.html)"
-			],
-			[
-				"reques",
-				"request_view_recently_generated_url\t(client.js)"
-			],
-			[
-				"inde",
-				"indexOf\t(server.js)"
-			],
-			[
-				"key",
-				"keysJSON"
-			],
-			[
-				"file",
-				"filename"
-			],
-			[
-				"select",
-				"selectedName"
-			],
-			[
-				"requestView",
-				"requestViewRecentlyGenerated\t(client.js)"
-			],
-			[
-				"fil",
-				"filename"
-			],
-			[
-				"recently",
-				"recently-generated-selector\t(index.html)"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/geometry.h",
+			"file": "src/engine.h",
 			"settings":
 			{
-				"buffer_size": 570,
+				"buffer_size": 848,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "project.sublime-project",
+			"file": "src/joiner.h",
 			"settings":
 			{
-				"buffer_size": 818,
+				"buffer_size": 346,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/joiner.cpp",
+			"settings":
+			{
+				"buffer_size": 381,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/geometry.h",
+			"settings":
+			{
+				"buffer_size": 1201,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/geometry.cpp",
 			"settings":
 			{
-				"buffer_size": 1511,
+				"buffer_size": 3916,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/engine.cpp",
+			"settings":
+			{
+				"buffer_size": 4662,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -595,6 +622,14 @@
 		"selected_items":
 		[
 			[
+				"a",
+				"Arithmetic"
+			],
+			[
+				"ari",
+				"Arithmetic"
+			],
+			[
 				"color",
 				"UI: Select Color Scheme"
 			],
@@ -608,10 +643,6 @@
 			],
 			[
 				"ar",
-				"Arithmetic"
-			],
-			[
-				"a",
 				"Arithmetic"
 			],
 			[
@@ -660,29 +691,31 @@
 	"expanded_folders":
 	[
 		"/C/Users/William Lew/Desktop/no_tears",
-		"/C/Users/William Lew/Desktop/no_tears/shaders",
-		"/C/Users/William Lew/Desktop/no_tears/src"
+		"/C/Users/William Lew/Desktop/no_tears/res",
+		"/C/Users/William Lew/Desktop/no_tears/shaders"
 	],
 	"file_history":
 	[
+		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.vertex",
+		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.fragment",
+		"/C/Users/William Lew/Desktop/no_tears/src/engine.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/joiner.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/basic.fragment",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/basic.vertex",
-		"/C/Users/William Lew/Desktop/no_tears/src/vector2.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/joiner.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/external_context.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/engine.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/project.sublime-project",
+		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/geometry.h",
 		"/C/Users/William Lew/Desktop/no_tears/src/engine.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/joiner.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/geometry.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/external_context.h",
 		"/C/Users/William Lew/Desktop/no_tears/main.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/vector2.h",
 		"/C/Users/William Lew/Desktop/no_tears/old/src/engine.h",
 		"/C/Users/William Lew/Desktop/no_tears/old/src/engine.cpp",
 		"/C/Projects/ShaderFun/src/engine.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/default.fragment",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/default.vertex",
-		"/C/Users/William Lew/Desktop/no_tears/src/geometry.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/geometry.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/vector2.cpp",
 		"/C/Users/William Lew/Desktop/part 2.txt",
 		"/C/Users/William Lew/Desktop/no_tears/src/external.cpp",
@@ -763,6 +796,29 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"shaderProgramHandle",
+			"\\",
+			"1",
+			"0",
+			"textureHandle",
+			"position.y + height",
+			"new",
+			"textureHandle",
+			"shaderProgramHandleList",
+			"shaderProgramHandle",
+			"height",
+			"width",
+			"01",
+			"((rand() % 11) / 10.0f)",
+			"11",
+			"10",
+			"11",
+			"100",
+			"int",
+			"velocityXList",
+			"float elapsedTimeS",
+			"elapsedTimeS",
+			" \n",
 			"vertexData",
 			"positionData",
 			"0.8",
@@ -810,29 +866,101 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/geometry.h",
+					"file": "src/engine.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 570,
+						"buffer_size": 848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								463,
-								463
+								423,
+								447
 							]
 						],
 						"settings":
 						{
-							"SL.43.region_keys":
+							"SL.15.region_keys":
+							[
+							],
+							"SL.35.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/joiner.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"SL.27.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/joiner.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
+							]
+						],
+						"settings":
+						{
+							"SL.17.region_keys":
+							[
+							],
+							"SL.82.region_keys":
 							[
 							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
@@ -845,66 +973,149 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "project.sublime-project",
+					"buffer": 3,
+					"file": "src/geometry.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 818,
+						"buffer_size": 1201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								628,
-								628
+								958,
+								958
 							]
 						],
 						"settings":
 						{
-							"SL.79.region_keys":
+							"SL.33.region_keys":
 							[
 							],
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "src/geometry.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1511,
+						"buffer_size": 3916,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1819,
+								1819
 							]
 						],
 						"settings":
 						{
-							"SL.44.region_keys":
+							"SL.21.region_keys":
+							[
+							],
+							"SL.32.region_keys":
 							[
 							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/engine.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								887,
+								887
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"SL.22.region_keys":
+							[
+							],
+							"SL.31.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "src/engine.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+							],
+							"SL.35.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -927,11 +1138,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -947,7 +1165,7 @@
 	},
 	"output.exec":
 	{
-		"height": 56.0
+		"height": 65.0
 	},
 	"output.find_results":
 	{
@@ -967,6 +1185,34 @@
 		"selected_items":
 		[
 			[
+				"tex",
+				"no_tears\\shaders\\textured.fragment"
+			],
+			[
+				"en",
+				"no_tears\\src\\engine.cpp"
+			],
+			[
+				"",
+				"no_tears\\shaders\\textured.fragment"
+			],
+			[
+				"geo",
+				"no_tears\\src\\geometry.cpp"
+			],
+			[
+				"pro",
+				"project.sublime-project"
+			],
+			[
+				"joi",
+				"src\\joiner.cpp"
+			],
+			[
+				"shader",
+				"shaders\\basic.vertex"
+			],
+			[
 				"engi",
 				"src\\engine.cpp"
 			],
@@ -979,14 +1225,6 @@
 				"src\\engine.cpp"
 			],
 			[
-				"joi",
-				"src\\joiner.cpp"
-			],
-			[
-				"en",
-				"src\\engine.h"
-			],
-			[
 				"engin",
 				"src\\engine.h"
 			],
@@ -995,20 +1233,12 @@
 				"src\\vector2.h"
 			],
 			[
-				"geo",
-				"src\\geometry.cpp"
-			],
-			[
 				"exter",
 				"src\\external.cpp"
 			],
 			[
 				"sam",
 				"client_vm/sample_s_json.txt"
-			],
-			[
-				"shader",
-				"server/client/src/shader_source.js"
 			],
 			[
 				"engine",
@@ -1147,10 +1377,6 @@
 				"client_vm/sb-show-deps"
 			],
 			[
-				"",
-				"client_vm/20190610-1551-13.json"
-			],
-			[
 				"show-dep",
 				"client_vm/sb-show-deps"
 			],
@@ -1207,10 +1433,6 @@
 				"client_vm/client.py"
 			],
 			[
-				"pro",
-				"project.sublime-project"
-			],
-			[
 				"de",
 				"client_vm/dependency.json"
 			],
@@ -1257,7 +1479,7 @@
 		"selected_items":
 		[
 		],
-		"width": 592.0
+		"width": 373.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -1266,7 +1488,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
