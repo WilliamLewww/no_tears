@@ -1,12 +1,9 @@
 #pragma once
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include "examples/no_tears.h"
-#include "examples/scavenger_hunt.h"
+#include "../geometry.h"
 
-class Joiner {
+class NoTears {
 private:
-	NoTears* noTears;
+	RectangleTextured* rectangleList;
 public:
 	void initialize(GLuint* shaderProgramHandleArray, GLuint* textureHandleArray);
 	void update(float elapsedTimeS);

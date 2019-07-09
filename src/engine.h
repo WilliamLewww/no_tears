@@ -11,10 +11,12 @@
 #include <GLFW/glfw3native.h>
 #include <SOIL.h>
 #include "external_context.h"
+#include "input.h"
 #include "joiner.h"
 
 class Engine {
 private:
+	Input* input;
 	Joiner* joiner;
 
 	const GLFWvidmode* mode;

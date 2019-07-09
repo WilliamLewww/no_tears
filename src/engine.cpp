@@ -24,8 +24,12 @@ void Engine::initialize() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    glEnable(GL_DEBUG_OUTPUT);
-    glDebugMessageCallback(MessageCallback, 0);
+    // glEnable(GL_DEBUG_OUTPUT);
+    // glDebugMessageCallback(MessageCallback, 0);
+
+    input = new Input();
+    glfwSetKeyCallback(window, Input::keyCallback);
+    glfwSetCursorPosCallback(window, Input::cursorPositionCallback);
 
     EnumWindows(MatchTargetWindow, 0);
     setupResoultion(mode->width, mode->height);
@@ -103,6 +107,8 @@ void Engine::start() {
 }
 
 void Engine::quit() {
+    delete input;
+
     joiner->quit();
     delete joiner;
 
@@ -116,6 +122,7 @@ void Engine::quit() {
 void Engine::update(float elapsedTimeS) {
     glfwPollEvents();
 	joiner->update(elapsedTimeS);
+    input->update(window);
 }
 
 void Engine::render() {

@@ -9,6 +9,7 @@
 				"-o",
 				"C:/Users/William Lew/Desktop/no_tears/NoTears",
 				"C:/Users/William Lew/Desktop/no_tears/src/*.cpp",
+				"C:/Users/William Lew/Desktop/no_tears/src/examples/*.cpp",
 				"-IC:/Libraries/glfw-3.3.bin.WIN32/include",
 				"-LC:/Libraries/glfw-3.3.bin.WIN32/lib-mingw-w64",
 				"-IC:/Libraries/glew-2.1.0/include",
