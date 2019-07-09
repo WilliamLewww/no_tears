@@ -4,6 +4,10 @@
 
 class ScavengerHunt {
 private:
+	RectangleBasic* rectangleList;
+	int rectangleCount;
+	
+	int rectangleSize;
 public:
 	void initialize(GLuint* shaderProgramHandleArray);
 	void update(Input* input, float elapsedTimeS);

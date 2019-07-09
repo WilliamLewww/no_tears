@@ -24,7 +24,8 @@
 				"-lglfw3dll",
 				"-lopengl32",
 				"-lgdi32",
-				"-std=c++17"
+				"-std=c++17",
+				// "-mwindows",
 			],
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
 			"name": "NoTears",

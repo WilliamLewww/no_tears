@@ -58,8 +58,7 @@ void Engine::initializeWindow() {
     glfwSetWindowPos(window, 0, 0);
     glfwMakeContextCurrent(window);
 
-    windowLong = GetWindowLong(windowNative, GWL_EXSTYLE);
-    SetWindowLong(windowNative, GWL_EXSTYLE, windowLong | WS_EX_TRANSPARENT | WS_EX_LAYERED);
+    SetWindowLong(windowNative, GWL_EXSTYLE, WS_EX_TOOLWINDOW | WS_EX_TRANSPARENT | WS_EX_LAYERED);
 }
 
 void Engine::initializeShaders() {
