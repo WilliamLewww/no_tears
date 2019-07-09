@@ -121,7 +121,7 @@ void Engine::quit() {
 
 void Engine::update(float elapsedTimeS) {
     glfwPollEvents();
-	joiner->update(elapsedTimeS);
+	joiner->update(input, elapsedTimeS);
     input->update(window);
 }
 

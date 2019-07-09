@@ -4,7 +4,7 @@ void ScavengerHunt::initialize(GLuint* shaderProgramHandleArray) {
 
 }
 
-void ScavengerHunt::update(float elapsedTimeS) {
+void ScavengerHunt::update(Input* input, float elapsedTimeS) {
 
 }
 

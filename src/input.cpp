@@ -14,6 +14,11 @@ void Input::cursorPositionCallback(GLFWwindow* window, double x, double y) {
 
 }
 
+Vector2 Input::getMousePosition() {
+	Vector2 tempPosition = { (float)mousePositionX, (float)mousePositionY };
+	return tempPosition;
+}
+
 void Input::update(GLFWwindow* window) {
     glfwGetCursorPos(window, &mousePositionX, &mousePositionY);
 }
