@@ -24,8 +24,7 @@
 				"-lglfw3dll",
 				"-lopengl32",
 				"-lgdi32",
-				"-std=c++17",
-				// "-mwindows",
+				"-std=c++17"
 			],
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
 			"name": "NoTears",
@@ -38,9 +37,6 @@
 	[
 		{
 			"path": "."
-		},
-		{
-			"path": "C:\\Users\\William Lew\\Downloads"
 		}
 	]
 }

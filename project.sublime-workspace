@@ -4,16 +4,60 @@
 		"selected_items":
 		[
 			[
-				"mouseP",
-				"mousePositionY\t(input.h)"
+				"effe",
+				"effectScale\tabc"
+			],
+			[
+				"effec",
+				"effectScaleLocationHandle\tabc"
 			],
 			[
 				"mouse",
-				"mousePositionX\t(input.h)"
+				"mousePosition\tabc"
+			],
+			[
+				"mouseP",
+				"mousePositionX\tabc"
+			],
+			[
+				"mousePo",
+				"mousePositionX\t(scavenger_hunt.cpp)"
+			],
+			[
+				"mo",
+				"mousePositionLocationHandle\t(scavenger_hunt.h)"
+			],
+			[
+				"rec",
+				"rectangleCount\tabc"
+			],
+			[
+				"rectan",
+				"rectangleCount\tabc"
+			],
+			[
+				"curr",
+				"currentRectangleCount\tabc"
 			],
 			[
 				"shader",
-				"shaderProgramHandleArray\t(scavenger_hunt.h)"
+				"shaderProgramHandleArray\tabc"
+			],
+			[
+				"recta",
+				"rectangleList\tabc"
+			],
+			[
+				"vel",
+				"velocityXList\tabc"
+			],
+			[
+				"shad",
+				"shaderProgramHandleArray\tabc"
+			],
+			[
+				"vec",
+				"vector2.h\t(input.h)"
 			],
 			[
 				"initi",
@@ -46,14 +90,6 @@
 			[
 				"textureHa",
 				"textureHandle\tabc"
-			],
-			[
-				"rectan",
-				"rectangleT\tabc"
-			],
-			[
-				"recta",
-				"rectangleT\tabc"
 			],
 			[
 				"Rect",
@@ -96,20 +132,12 @@
 				"velocityYList\tabc"
 			],
 			[
-				"vel",
-				"velocityYList\tabc"
-			],
-			[
 				"veloc",
 				"velocityYList\tabc"
 			],
 			[
 				"frame",
 				"frameEnd\tabc"
-			],
-			[
-				"rec",
-				"rectanglePosition\tabc"
 			],
 			[
 				"screenH",
@@ -486,34 +514,6 @@
 			[
 				"lineInd",
 				"lineIndexListUp\tabc"
-			],
-			[
-				"conne",
-				"connectDependencyDown\tabc"
-			],
-			[
-				"colorL",
-				"colorList\tabc"
-			],
-			[
-				"ean",
-				"enableVertexAttribArray\tabc"
-			],
-			[
-				"GEOM",
-				"GEOMERTY_MULTIPLE\t(engine.js)"
-			],
-			[
-				"FRAG",
-				"FRAGMENT_SHADER_GEOMETRY_MULTIPLE\t(shader_source.js)"
-			],
-			[
-				"rectang",
-				"rectangleBuffer\tabc"
-			],
-			[
-				"uni",
-				"uniform4fv\tabc"
 			]
 		]
 	},
@@ -523,25 +523,42 @@
 			"file": "src/examples/scavenger_hunt.h",
 			"settings":
 			{
-				"buffer_size": 197,
+				"buffer_size": 1018,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/input.h",
+			"file": "src/external_context.h",
 			"settings":
 			{
-				"buffer_size": 354,
+				"buffer_size": 393,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/input.cpp",
+			"file": "src/geometry.h",
 			"settings":
 			{
-				"buffer_size": 372,
+				"buffer_size": 1201,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/geometry.cpp",
+			"settings":
+			{
+				"buffer_size": 3865,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shaders/avoid_uniform.vertex",
+			"settings":
+			{
+				"buffer_size": 547,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -550,43 +567,25 @@
 			"file": "src/examples/scavenger_hunt.cpp",
 			"settings":
 			{
-				"buffer_size": 219,
+				"buffer_size": 3020,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/joiner.h",
+			"file": "src/input.cpp",
 			"settings":
 			{
-				"buffer_size": 325,
+				"buffer_size": 866,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/joiner.cpp",
+			"file": "src/input.h",
 			"settings":
 			{
-				"buffer_size": 386,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/engine.cpp",
-			"settings":
-			{
-				"buffer_size": 5157,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/engine.h",
-			"settings":
-			{
-				"buffer_size": 882,
+				"buffer_size": 494,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -640,6 +639,10 @@
 		"selected_items":
 		[
 			[
+				"ar",
+				"Arithmetic"
+			],
+			[
 				"a",
 				"Arithmetic"
 			],
@@ -658,10 +661,6 @@
 			[
 				"colorsub",
 				"Colorsublime: Install Theme"
-			],
-			[
-				"ar",
-				"Arithmetic"
 			],
 			[
 				"install pa",
@@ -709,33 +708,37 @@
 	"expanded_folders":
 	[
 		"/C/Users/William Lew/Desktop/no_tears",
-		"/C/Users/William Lew/Desktop/no_tears/src"
+		"/C/Users/William Lew/Desktop/no_tears/shaders"
 	],
 	"file_history":
 	[
-		"/C/Users/William Lew/Desktop/no_tears/src/geometry.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/engine.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/project.sublime-project",
+		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/joiner.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/engine.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/geometry.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/geometry.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/engine.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/joiner.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/input.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/input.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/vector2.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/vector2.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.fragment",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.vertex",
-		"/C/Users/William Lew/Desktop/no_tears/project.sublime-project",
-		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/joiner.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/engine.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/basic.fragment",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/basic.vertex",
-		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/joiner.h",
 		"/C/Users/William Lew/Desktop/no_tears/src/external_context.h",
 		"/C/Users/William Lew/Desktop/no_tears/main.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/vector2.h",
 		"/C/Users/William Lew/Desktop/no_tears/old/src/engine.h",
 		"/C/Users/William Lew/Desktop/no_tears/old/src/engine.cpp",
 		"/C/Projects/ShaderFun/src/engine.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/default.fragment",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/default.vertex",
-		"/C/Users/William Lew/Desktop/no_tears/src/vector2.cpp",
 		"/C/Users/William Lew/Desktop/part 2.txt",
 		"/C/Users/William Lew/Desktop/no_tears/src/external.cpp",
 		"/C/Users/William Lew/Desktop/vsa_gameboard/server/client/src/client.js",
@@ -815,6 +818,18 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"vec",
+			"v",
+			"vec",
+			"mousePositionX",
+			"LocationHandle",
+			"RectangleBasic",
+			"x",
+			"screenWidth",
+			"1",
+			"0",
+			"Vector2 Vector2::operator/(Vector2 vector) {",
+			"Vector2 Vector2::operator/(double value) {",
 			"Joiner",
 			"gl.",
 			"gl",
@@ -889,7 +904,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -898,150 +913,54 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 197,
+						"buffer_size": 1018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								37,
-								37
+								719,
+								719
 							]
 						],
 						"settings":
 						{
+							"SL.13.region_keys":
+							[
+							],
+							"SL.14.region_keys":
+							[
+							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/input.h",
+					"file": "src/external_context.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 354,
+						"buffer_size": 393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								354,
-								354
+								195,
+								195
 							]
 						],
 						"settings":
 						{
-							"SL.33.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/input.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 372,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								142,
-								142
-							]
-						],
-						"settings":
-						{
-							"SL.34.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/examples/scavenger_hunt.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 219,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								219,
-								219
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"file": "src/joiner.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								275,
-								275
-							]
-						],
-						"settings":
-						{
-							"SL.15.region_keys":
-							[
-							],
-							"SL.16.region_keys":
-							[
-							],
-							"SL.27.region_keys":
+							"SL.43.region_keys":
 							[
 							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
@@ -1054,25 +973,162 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/joiner.cpp",
+					"buffer": 2,
+					"file": "src/geometry.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 386,
+						"buffer_size": 1201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								384,
-								384
+								403,
+								403
 							]
 						],
 						"settings":
 						{
-							"SL.16.region_keys":
+							"SL.25.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 238.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/geometry.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								498,
+								498
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "shaders/avoid_uniform.vertex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								547,
+								547
+							]
+						],
+						"settings":
+						{
+							"SL.19.region_keys":
+							[
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "src/examples/scavenger_hunt.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3020,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1218,
+								1218
+							]
+						],
+						"settings":
+						{
+							"SL.14.region_keys":
+							[
+							],
+							"SL.15.region_keys":
+							[
+							],
+							"SL.17.region_keys":
+							[
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/input.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								598,
+								598
+							]
+						],
+						"settings":
+						{
+							"SL.35.region_keys":
 							[
 							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
@@ -1085,77 +1141,28 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "src/engine.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3874,
-								3874
-							]
-						],
-						"settings":
-						{
-							"SL.16.region_keys":
-							[
-							],
-							"SL.19.region_keys":
-							[
-							],
-							"SL.21.region_keys":
-							[
-							],
-							"SL.22.region_keys":
-							[
-							],
-							"SL.31.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1209.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
 					"buffer": 7,
-					"file": "src/engine.h",
+					"file": "src/input.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 882,
+						"buffer_size": 494,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								407,
-								389
+								116,
+								116
 							]
 						],
 						"settings":
 						{
-							"SL.15.region_keys":
+							"SL.36.region_keys":
 							[
 							],
-							"SL.35.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1211,7 +1218,7 @@
 	},
 	"output.exec":
 	{
-		"height": 65.0
+		"height": 82.0
 	},
 	"output.find_results":
 	{
@@ -1231,6 +1238,42 @@
 		"selected_items":
 		[
 			[
+				"inp",
+				"src\\input.cpp"
+			],
+			[
+				"engin",
+				"src\\engine.cpp"
+			],
+			[
+				"p",
+				"no_tears\\project.sublime-project"
+			],
+			[
+				"pro",
+				"no_tears\\project.sublime-project"
+			],
+			[
+				"joi",
+				"no_tears\\src\\joiner.cpp"
+			],
+			[
+				"geo",
+				"no_tears\\src\\geometry.h"
+			],
+			[
+				"ext",
+				"no_tears\\src\\external_context.cpp"
+			],
+			[
+				"eng",
+				"no_tears\\src\\engine.cpp"
+			],
+			[
+				"no",
+				"no_tears\\src\\examples\\no_tears.h"
+			],
+			[
 				"",
 				"no_tears\\src\\examples\\no_tears.h"
 			],
@@ -1239,24 +1282,8 @@
 				"no_tears\\src\\engine.cpp"
 			],
 			[
-				"no",
-				"no_tears\\src\\examples\\no_tears.h"
-			],
-			[
 				"tex",
 				"no_tears\\shaders\\textured.vertex"
-			],
-			[
-				"geo",
-				"no_tears\\src\\geometry.cpp"
-			],
-			[
-				"pro",
-				"project.sublime-project"
-			],
-			[
-				"joi",
-				"src\\joiner.cpp"
 			],
 			[
 				"shader",
@@ -1265,18 +1292,6 @@
 			[
 				"engi",
 				"src\\engine.cpp"
-			],
-			[
-				"ext",
-				"src\\external_context.h"
-			],
-			[
-				"eng",
-				"src\\engine.cpp"
-			],
-			[
-				"engin",
-				"src\\engine.h"
 			],
 			[
 				"ve",
@@ -1529,16 +1544,16 @@
 		"selected_items":
 		[
 		],
-		"width": 373.0
+		"width": 592.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
