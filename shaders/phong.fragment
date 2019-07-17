@@ -17,16 +17,19 @@ void main() {
 	vec3 ambientColor = vec3(1.0, 1.0, 1.0);
 	vec3 ambient = ambientIntensity * ambientColor;
 
+	float diffuseIntensity = 0.85;
 	vec3 normal = normalize(v_normal);
 	vec3 lightDirection = normalize(lightPosition - fragmentPosition);
+	vec3 diffuseLighting = max(dot(normal, lightDirection), 0.0);
 
-	vec3 diffuse = max(dot(normal, lightDirection), 0.0) * lightColor;
+	vec3 diffuse = diffuseIntensity * diffuseLighting * lightColor;
 
 	float specularIntensity = 0.5;
 	vec3 viewDirection = normalize(viewPosition - fragmentPosition);
 	vec3 reflectDirection = reflect(-lightDirection, normal);
+	vec3 specularLighting = pow(max(dot(viewDirection, reflectDirection), 0.0), 32);
 
-	vec3 specular = specularIntensity * pow(max(dot(viewDirection, reflectDirection), 0.0), 32) * lightColor;
+	vec3 specular = specularIntensity * specularLighting * lightColor;
 
 	vec3 lightingColor = (ambient + diffuse + specular);
 
