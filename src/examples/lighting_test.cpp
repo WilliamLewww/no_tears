@@ -15,17 +15,29 @@ void LightingTest::initialize(GLuint* shaderProgramHandleArray) {
 
 	projectionMatrix = glm::perspective(glm::radians(45.0f), 1920.0f / 1080.0f, 0.1f, 100.0f);
 
-	light.position = glm::vec3(-5.0f, -3.5f, -2.5f);
+	light.position = glm::vec3(-2.5f, 2.0f, -2.5f);
 	light.color = glm::vec3(1.0f, 1.0f, 1.0f);
 
-	cube = new CubePhong;
-	cube->initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
-	cube->setColor(255.0, 0.0, 0.0, 255.0);
+	cubeCount = 4;
+	cubeList = new CubePhong[cubeCount];
+
+	cubeList[0].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
+	cubeList[0].setColor(255.0, 0.0, 0.0, 255.0);
+
+	cubeList[1].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
+	cubeList[1].setColor(0.0, 255.0, 0.0, 255.0);
+	cubeList[1].translate(glm::vec3(1.0f, 0.0f, 0.0f));
+
+	cubeList[2].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
+	cubeList[2].setColor(0.0, 0.0, 255.0, 255.0);
+	cubeList[2].translate(glm::vec3(0.0f, 0.0f, 1.0f));
+
+	cubeList[3].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
+	cubeList[3].setColor(255.0, 0.0, 255.0, 255.0);
+	cubeList[3].translate(glm::vec3(0.0f, 1.0f, 0.0f));
 }
 
 void LightingTest::update(Input* input, float elapsedTimeS) {
-	cube->rotate(0.01f, glm::vec3(0.2f, 0.1f, 0.3f));
-
 	if (input->checkKeyDown(265)) {
 		camera.position += 0.05f * camera.front;
 	}
@@ -51,11 +63,13 @@ void LightingTest::update(Input* input, float elapsedTimeS) {
 }
 
 void LightingTest::render() {
-	cube->render();
+	for (int x = 0; x < cubeCount; x++) {
+		cubeList[x].render();
+	}
 }
 
 void LightingTest::quit() {
-	delete cube;
+	delete [] cubeList;
 }
 
 void CubePhong::initialize(GLuint shaderProgramHandle, glm::mat4* viewMatrix, glm::mat4* projectionMatrix, Camera* camera, Light* light) {

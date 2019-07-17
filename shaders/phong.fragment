@@ -13,7 +13,7 @@ uniform vec3 lightColor;
 uniform vec3 viewPosition;
 
 void main() {
-	float ambientIntensity = 0.25;
+	float ambientIntensity = 0.1;
 	vec3 ambientColor = vec3(1.0, 1.0, 1.0);
 	vec3 ambient = ambientIntensity * ambientColor;
 

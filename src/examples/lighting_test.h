@@ -50,7 +50,7 @@ public:
 	inline void setColor(int r, int g, int b, int a) {
 		color = glm::vec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f);
 	}
-	
+
 	void initialize(GLuint shaderProgramHandle, glm::mat4* viewMatrix, glm::mat4* projectionMatrix, Camera* camera, Light* light);
 	void render();
 
@@ -66,7 +66,8 @@ private:
 	Camera camera;
 	Light light;
 
-	CubePhong* cube;
+	int cubeCount;
+	CubePhong* cubeList;
 public:
 	void initialize(GLuint* shaderProgramHandleArray);
 	void update(Input* input, float elapsedTimeS);
