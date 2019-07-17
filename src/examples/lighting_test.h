@@ -3,10 +3,26 @@
 #include "../geometry.h"
 #include "../input.h"
 
+struct Light {
+	glm::vec3 position;
+	glm::vec3 color;
+};
+
+struct Camera {
+	glm::vec3 position;
+	glm::vec3 front;
+	glm::vec3 up;
+	float pitch;
+	float yaw;
+};
+
 class CubePhong {
 private:
 	float* positionVertexData;
 	float* normalVertexData;
+
+	Camera* camera;
+	Light* light;
 
 	glm::mat4 modelMatrix;
 	glm::mat4* viewMatrix;
@@ -21,9 +37,13 @@ private:
 	GLuint viewMatrixLocationHandle;
 	GLuint projectionMatrixLocationHandle;
 
+	GLuint lightPositionLocationHandle;
+	GLuint lightColorLocationHandle;
+	GLuint viewPositionLocationHandle;
+
 	GLuint shaderProgramHandle;
 public:
-	void initialize(GLuint shaderProgramHandle, glm::mat4* viewMatrix, glm::mat4* projectionMatrix);
+	void initialize(GLuint shaderProgramHandle, glm::mat4* viewMatrix, glm::mat4* projectionMatrix, Camera* camera, Light* light);
 	void render();
 
 	void translate(glm::vec3 translation);
@@ -33,13 +53,10 @@ public:
 class LightingTest {
 private:
 	glm::mat4 viewMatrix;
-	glm::vec3 cameraPosition;
-	glm::vec3 cameraFront;
-	glm::vec3 cameraUp;
-	float cameraPitch;
-	float cameraYaw;
-
 	glm::mat4 projectionMatrix;
+
+	Camera camera;
+	Light light;
 
 	CubePhong* cube;
 public:
