@@ -3,7 +3,7 @@
 in vec3 fragmentPosition;
 in vec3 v_normal;
 
-out vec4 FragColor;
+layout (location = 0) out vec4 fragmentColor;
 
 uniform vec4 color;
 
@@ -33,5 +33,5 @@ void main() {
 
 	vec3 lightingColor = (ambient + diffuse + specular);
 
-	FragColor = vec4(lightingColor, 1.0) * color;
+	fragmentColor = vec4(lightingColor, 1.0) * color;
 }
