@@ -5,6 +5,8 @@ in vec3 v_normal;
 
 out vec4 FragColor;
 
+uniform vec4 color;
+
 uniform vec3 lightPosition;
 uniform vec3 lightColor;
 
@@ -28,5 +30,5 @@ void main() {
 
 	vec3 finalColor = (ambient + diffuse + specular) * vec3(1.0, 1.0, 1.0);
 
-	FragColor = vec4(finalColor, 1.0);
+	FragColor = vec4(finalColor, 1.0) * color;
 }

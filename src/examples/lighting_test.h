@@ -21,6 +21,8 @@ private:
 	float* positionVertexData;
 	float* normalVertexData;
 
+	glm::vec4 color;
+
 	Camera* camera;
 	Light* light;
 
@@ -37,12 +39,18 @@ private:
 	GLuint viewMatrixLocationHandle;
 	GLuint projectionMatrixLocationHandle;
 
+	GLuint colorLocationHandle;
+
 	GLuint lightPositionLocationHandle;
 	GLuint lightColorLocationHandle;
 	GLuint viewPositionLocationHandle;
 
 	GLuint shaderProgramHandle;
 public:
+	inline void setColor(int r, int g, int b, int a) {
+		color = glm::vec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f);
+	}
+	
 	void initialize(GLuint shaderProgramHandle, glm::mat4* viewMatrix, glm::mat4* projectionMatrix, Camera* camera, Light* light);
 	void render();
 

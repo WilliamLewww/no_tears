@@ -20,6 +20,7 @@ void LightingTest::initialize(GLuint* shaderProgramHandleArray) {
 
 	cube = new CubePhong;
 	cube->initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
+	cube->setColor(255.0, 0.0, 0.0, 255.0);
 }
 
 void LightingTest::update(Input* input, float elapsedTimeS) {
@@ -146,6 +147,8 @@ void CubePhong::initialize(GLuint shaderProgramHandle, glm::mat4* viewMatrix, gl
 	    0.0f,  1.0f,  0.0f
 	};
 
+	color = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+
 	modelMatrix = glm::mat4(1.0f);
 
 	this->shaderProgramHandle = shaderProgramHandle;
@@ -164,6 +167,8 @@ void CubePhong::initialize(GLuint shaderProgramHandle, glm::mat4* viewMatrix, gl
 	modelMatrixLocationHandle = glGetUniformLocation(shaderProgramHandle, "modelMatrix");
 	viewMatrixLocationHandle = glGetUniformLocation(shaderProgramHandle, "viewMatrix");
 	projectionMatrixLocationHandle = glGetUniformLocation(shaderProgramHandle, "projectionMatrix");
+
+	colorLocationHandle = glGetUniformLocation(shaderProgramHandle, "color");
 
 	lightPositionLocationHandle = glGetUniformLocation(shaderProgramHandle, "lightPosition");
 	lightColorLocationHandle = glGetUniformLocation(shaderProgramHandle, "lightColor");
@@ -189,6 +194,8 @@ void CubePhong::render() {
 	glUniformMatrix4fv(modelMatrixLocationHandle, 1, GL_FALSE, glm::value_ptr(modelMatrix));
 	glUniformMatrix4fv(viewMatrixLocationHandle, 1, GL_FALSE, glm::value_ptr(*viewMatrix));
 	glUniformMatrix4fv(projectionMatrixLocationHandle, 1, GL_FALSE, glm::value_ptr(*projectionMatrix));
+
+	glUniform4fv(colorLocationHandle, 1, glm::value_ptr(color));
 
 	glUniform3fv(lightPositionLocationHandle, 1, glm::value_ptr(light->position));
 	glUniform3fv(lightColorLocationHandle, 1, glm::value_ptr(light->color));
