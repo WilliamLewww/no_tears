@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"light",
+				"lighting_test.h\t(lighting_test.cpp)"
+			],
+			[
+				"Lig",
+				"LIGHTING_TEST\tabc"
+			],
+			[
 				"effe",
 				"effectScale\tabc"
 			],
@@ -506,19 +514,20 @@
 			[
 				"omn",
 				"omni_list\tabc"
-			],
-			[
-				"dependenc",
-				"dependencyUp\tabc"
-			],
-			[
-				"lineInd",
-				"lineIndexListUp\tabc"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "src/external_context.h",
+			"settings":
+			{
+				"buffer_size": 393,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
 		{
 			"file": "src/examples/scavenger_hunt.h",
 			"settings":
@@ -529,11 +538,28 @@
 			}
 		},
 		{
-			"file": "src/external_context.h",
+			"file": "src/joiner.cpp",
 			"settings":
 			{
-				"buffer_size": 393,
+				"buffer_size": 1482,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/joiner.h",
+			"settings":
+			{
+				"buffer_size": 585,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/examples/no_tears.h",
+			"settings":
+			{
+				"buffer_size": 338,
 				"line_ending": "Windows"
 			}
 		},
@@ -555,19 +581,19 @@
 			}
 		},
 		{
-			"file": "shaders/avoid_uniform.vertex",
+			"file": "src/examples/lighting_test.cpp",
 			"settings":
 			{
-				"buffer_size": 547,
+				"buffer_size": 228,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/examples/scavenger_hunt.cpp",
+			"file": "src/examples/lighting_test.h",
 			"settings":
 			{
-				"buffer_size": 3020,
+				"buffer_size": 232,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -712,11 +738,14 @@
 	],
 	"file_history":
 	[
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/scavenger_hunt.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/scavenger_hunt.h",
+		"/C/Users/William Lew/Desktop/no_tears/shaders/avoid_uniform.vertex",
 		"/C/Users/William Lew/Desktop/no_tears/src/engine.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/project.sublime-project",
 		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/joiner.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.h",
 		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.h",
@@ -818,6 +847,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"NoTears",
 			"vec",
 			"v",
 			"vec",
@@ -904,45 +934,11 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/examples/scavenger_hunt.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1018,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								719,
-								719
-							]
-						],
-						"settings":
-						{
-							"SL.13.region_keys":
-							[
-							],
-							"SL.14.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "src/external_context.h",
 					"semi_transient": false,
 					"settings":
@@ -954,8 +950,8 @@
 						"selection":
 						[
 							[
-								195,
-								195
+								100,
+								100
 							]
 						],
 						"settings":
@@ -969,11 +965,125 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/examples/scavenger_hunt.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								936,
+								936
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "src/joiner.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								576
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/joiner.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								585,
+								585
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/examples/no_tears.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "src/geometry.h",
 					"semi_transient": false,
 					"settings":
@@ -1001,11 +1111,11 @@
 						"translation.y": 238.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "src/geometry.cpp",
 					"semi_transient": false,
 					"settings":
@@ -1032,38 +1142,6 @@
 					},
 					"stack_index": 7,
 					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "shaders/avoid_uniform.vertex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 547,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								547,
-								547
-							]
-						],
-						"settings":
-						{
-							"SL.19.region_keys":
-							[
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
 				}
 			]
 		},
@@ -1072,34 +1150,55 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
-					"file": "src/examples/scavenger_hunt.cpp",
+					"buffer": 7,
+					"file": "src/examples/lighting_test.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3020,
+						"buffer_size": 228,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								927,
-								927
+								138,
+								138
 							]
 						],
 						"settings":
 						{
-							"SL.14.region_keys":
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/examples/lighting_test.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"SL.26.region_keys":
 							[
 							],
-							"SL.15.region_keys":
-							[
-							],
-							"SL.17.region_keys":
-							[
-							],
-							"history_list_is_closing": true,
 							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -1110,7 +1209,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "src/input.cpp",
 					"semi_transient": false,
 					"settings":
@@ -1137,11 +1236,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 10,
 					"file": "src/input.h",
 					"semi_transient": false,
 					"settings":
@@ -1168,7 +1267,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1238,6 +1337,26 @@
 		"selected_items":
 		[
 			[
+				"sca",
+				"src\\examples\\scavenger_hunt.h"
+			],
+			[
+				"search",
+				"src\\external_context.h"
+			],
+			[
+				"no",
+				"src\\examples\\no_tears.cpp"
+			],
+			[
+				"ligh",
+				"src\\examples\\lighting_test.cpp"
+			],
+			[
+				"joi",
+				"src\\joiner.cpp"
+			],
+			[
 				"inp",
 				"src\\input.cpp"
 			],
@@ -1254,10 +1373,6 @@
 				"no_tears\\project.sublime-project"
 			],
 			[
-				"joi",
-				"no_tears\\src\\joiner.cpp"
-			],
-			[
 				"geo",
 				"no_tears\\src\\geometry.h"
 			],
@@ -1268,10 +1383,6 @@
 			[
 				"eng",
 				"no_tears\\src\\engine.cpp"
-			],
-			[
-				"no",
-				"no_tears\\src\\examples\\no_tears.h"
 			],
 			[
 				"",
@@ -1546,7 +1657,7 @@
 		],
 		"width": 592.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

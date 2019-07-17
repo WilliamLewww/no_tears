@@ -24,8 +24,8 @@ void Engine::initialize() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    // glEnable(GL_DEBUG_OUTPUT);
-    // glDebugMessageCallback(MessageCallback, 0);
+    glEnable(GL_DEBUG_OUTPUT);
+    glDebugMessageCallback(MessageCallback, 0);
 
     input = new Input();
     glfwSetKeyCallback(window, Input::keyCallback);
@@ -62,7 +62,7 @@ void Engine::initializeWindow() {
 }
 
 void Engine::initializeShaders() {
-    shaderProgramHandleArray = new GLuint[3];
+    shaderProgramHandleArray = new GLuint[4];
 
     std::string vertexShaderString;
     std::string fragmentShaderString;
@@ -78,6 +78,10 @@ void Engine::initializeShaders() {
     vertexShaderString = readShaderSource("shaders/avoid_uniform.vertex");
     fragmentShaderString = readShaderSource("shaders/basic.fragment");
     shaderProgramHandleArray[2] = createShaderProgram(vertexShaderString, fragmentShaderString);
+
+    vertexShaderString = readShaderSource("shaders/phong.vertex");
+    fragmentShaderString = readShaderSource("shaders/phong.fragment");
+    shaderProgramHandleArray[3] = createShaderProgram(vertexShaderString, fragmentShaderString);
 }
 
 void Engine::initializeTextures() {
