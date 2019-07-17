@@ -28,7 +28,7 @@ void main() {
 
 	vec3 specular = specularIntensity * pow(max(dot(viewDirection, reflectDirection), 0.0), 32) * lightColor;
 
-	vec3 finalColor = (ambient + diffuse + specular) * vec3(1.0, 1.0, 1.0);
+	vec3 lightingColor = (ambient + diffuse + specular);
 
-	FragColor = vec4(finalColor, 1.0) * color;
+	FragColor = vec4(lightingColor, 1.0) * color;
 }
