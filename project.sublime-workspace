@@ -532,7 +532,7 @@
 			"file": "shaders/phong.fragment",
 			"settings":
 			{
-				"buffer_size": 863,
+				"buffer_size": 1008,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -573,7 +573,7 @@
 			"file": "shaders/phong.vertex",
 			"settings":
 			{
-				"buffer_size": 452,
+				"buffer_size": 454,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -976,19 +976,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 863,
+						"buffer_size": 1008,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								863,
-								863
+								1008,
+								1008
 							]
 						],
 						"settings":
 						{
+							"SL.15.region_keys":
+							[
+							],
 							"SL.69.region_keys":
 							[
 							],
@@ -1027,7 +1030,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1123,7 +1126,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 452,
+						"buffer_size": 454,
 						"regions":
 						{
 						},
@@ -1164,8 +1167,8 @@
 						"selection":
 						[
 							[
-								492,
-								492
+								1904,
+								1904
 							]
 						],
 						"settings":
@@ -1179,7 +1182,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1210,7 +1213,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

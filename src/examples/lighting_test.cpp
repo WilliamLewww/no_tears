@@ -1,7 +1,7 @@
 #include "lighting_test.h"
 
 void LightingTest::initialize(GLuint* shaderProgramHandleArray) {
-	camera.position = glm::vec3(0.0f, 0.0f, 3.0f);
+	camera.position = glm::vec3(0.0f, -5.0f, 8.0f);
 	camera.up = glm::vec3(0.0f, 1.0f, 0.0f);
 
 	camera.pitch = 0.0f;
@@ -15,55 +15,57 @@ void LightingTest::initialize(GLuint* shaderProgramHandleArray) {
 
 	projectionMatrix = glm::perspective(glm::radians(45.0f), 1920.0f / 1080.0f, 0.1f, 100.0f);
 
-	light.position = glm::vec3(0.0f, 1.5f, 0.0f);
+	light.position = glm::vec3(0.0f, 2.5f, 0.0f);
 	light.color = glm::vec3(1.0f, 1.0f, 1.0f);
 
-	cubeCount = 4;
+	cubeCount = 285;
 	cubeList = new CubePhong[cubeCount];
 
-	cubeList[0].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
-	cubeList[0].setColor(255.0, 0.0, 0.0, 255.0);
-
-	cubeList[1].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
-	cubeList[1].setColor(0.0, 255.0, 0.0, 255.0);
-	cubeList[1].translate(glm::vec3(1.0f, 0.0f, 0.0f));
-
-	cubeList[2].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
-	cubeList[2].setColor(0.0, 0.0, 255.0, 255.0);
-	cubeList[2].translate(glm::vec3(0.0f, 0.0f, 1.0f));
-
-	cubeList[3].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
-	cubeList[3].setColor(255.0, 0.0, 255.0, 255.0);
-	cubeList[3].translate(glm::vec3(0.0f, 1.0f, 0.0f));
+	int index = 0;
+	for (int x = 0; x < 10; x++) {
+		for (int y = 0; y < x; y++) {
+			for (int z = 0; z < x; z++) {
+				cubeList[index].initialize(shaderProgramHandleArray[3], &viewMatrix, &projectionMatrix, &camera, &light);
+				cubeList[index].setColor(rand() % 256, rand() % 256, rand() % 256, 255.0);
+				cubeList[index].translate(glm::vec3(y, -x, z));
+				index += 1;
+			}
+		}
+	}
 }
 
+float previousMouseX = -1.0f, previousMouseY = -1.0f;
 float currentLightRotation = 0.0f;
 void LightingTest::update(Input* input, float elapsedTimeS) {
 	currentLightRotation += 0.001f;
 
-	light.position.x = 2.5f * sin(currentLightRotation);
-	light.position.z = 2.5f * cos(currentLightRotation);
+	light.position.x = 25.0f * sin(currentLightRotation);
+	light.position.z = 25.0f * cos(currentLightRotation);
 	
-	if (input->checkKeyDown(265)) {
-		camera.position += 0.05f * camera.front;
-	}
-	if (input->checkKeyDown(264)) {
-		camera.position -= 0.05f * camera.front;
-	}
-	if (input->checkKeyDown(263)) {
-		camera.yaw -= 0.3f;
-		camera.front.x = cos(glm::radians(camera.pitch)) * cos(glm::radians(camera.yaw));
-		camera.front.y = sin(glm::radians(camera.pitch));
-		camera.front.z = cos(glm::radians(camera.pitch)) * sin(glm::radians(camera.yaw));
-		camera.front = glm::normalize(camera.front);
-	}
-	if (input->checkKeyDown(262)) {
-		camera.yaw += 0.3f;
-		camera.front.x = cos(glm::radians(camera.pitch)) * cos(glm::radians(camera.yaw));
-		camera.front.y = sin(glm::radians(camera.pitch));
-		camera.front.z = cos(glm::radians(camera.pitch)) * sin(glm::radians(camera.yaw));
-		camera.front = glm::normalize(camera.front);
-	}
+	if (input->checkKeyDown(265)) { camera.position += 0.05f * camera.front; }
+	if (input->checkKeyDown(264)) { camera.position -= 0.05f * camera.front; }
+	if (input->checkKeyDown(263)) { camera.position -= glm::normalize(glm::cross(camera.front, camera.up)) * 0.05f; }
+	if (input->checkKeyDown(262)) { camera.position += glm::normalize(glm::cross(camera.front, camera.up)) * 0.05f; }
+
+	Vector2 mousePosition = input->getMousePosition();
+	if (previousMouseX == -1.0f) { previousMouseX = mousePosition.x; }
+	if (previousMouseY == -1.0f) { previousMouseY = mousePosition.y; }
+
+	float xoffset = mousePosition.x - previousMouseX;
+	float yoffset = previousMouseY - mousePosition.y;
+	previousMouseX = mousePosition.x;
+	previousMouseY = mousePosition.y;
+
+	float sensitivity = 0.05f;
+	xoffset *= sensitivity;
+	yoffset *= sensitivity;
+
+	camera.yaw += xoffset;
+	camera.pitch += yoffset;
+	camera.front.x = cos(glm::radians(camera.pitch)) * cos(glm::radians(camera.yaw));
+	camera.front.y = sin(glm::radians(camera.pitch));
+	camera.front.z = cos(glm::radians(camera.pitch)) * sin(glm::radians(camera.yaw));
+	camera.front = glm::normalize(camera.front);
 
 	viewMatrix = glm::lookAt(camera.position, camera.position + camera.front, camera.up);
 }

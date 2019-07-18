@@ -15,7 +15,7 @@ MessageCallback( GLenum source,
 }
 
 void Engine::initialize() {
-    srand (time(NULL));
+    srand(time(NULL));
     
 	initializeContextGL();
 	initializeWindow();
@@ -24,8 +24,8 @@ void Engine::initialize() {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    glEnable(GL_DEBUG_OUTPUT);
-    glDebugMessageCallback(MessageCallback, 0);
+    // glEnable(GL_DEBUG_OUTPUT);
+    // glDebugMessageCallback(MessageCallback, 0);
 
     input = new Input();
     glfwSetKeyCallback(window, Input::keyCallback);
