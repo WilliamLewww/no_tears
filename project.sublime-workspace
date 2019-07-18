@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"vec",
+				"vec3\tabc"
+			],
+			[
+				"cube",
+				"cubeCount\tabc"
+			],
+			[
+				"glGe",
+				"glGetUniformLocation\tabc"
+			],
+			[
+				"lightColor",
+				"lightColorLocationHandle\t(lighting_test.h)"
+			],
+			[
+				"cameraP",
+				"cameraPitchRadians\tabc"
+			],
+			[
+				"rotate",
+				"rotateCamera\tabc"
+			],
+			[
+				"tran",
+				"translate\tabc"
+			],
+			[
+				"trans",
+				"translation\tabc"
+			],
+			[
+				"projec",
+				"projectionMatrix\tabc"
+			],
+			[
+				"proje",
+				"projectionMatrix\tabc"
+			],
+			[
+				"view",
+				"viewMatrix\tabc"
+			],
+			[
+				"viewM",
+				"viewMatrixLocationHandle\tabc"
+			],
+			[
+				"model",
+				"modelMatrix\tabc"
+			],
+			[
+				"glUnifo",
+				"glUniform4fv\t(geometry.cpp)"
+			],
+			[
+				"norm",
+				"normalVertexData\tabc"
+			],
+			[
+				"positi",
+				"positionVertexData\tabc"
+			],
+			[
+				"mo",
+				"modelMatrix\tabc"
+			],
+			[
+				"position",
+				"positionBufferHandle\t(geometry.cpp)"
+			],
+			[
+				"shader",
+				"shaderProgramHandle\tabc"
+			],
+			[
 				"light",
 				"lighting_test.h\t(lighting_test.cpp)"
 			],
@@ -32,10 +108,6 @@
 				"mousePositionX\t(scavenger_hunt.cpp)"
 			],
 			[
-				"mo",
-				"mousePositionLocationHandle\t(scavenger_hunt.h)"
-			],
-			[
 				"rec",
 				"rectangleCount\tabc"
 			],
@@ -48,10 +120,6 @@
 				"currentRectangleCount\tabc"
 			],
 			[
-				"shader",
-				"shaderProgramHandleArray\tabc"
-			],
-			[
 				"recta",
 				"rectangleList\tabc"
 			],
@@ -62,10 +130,6 @@
 			[
 				"shad",
 				"shaderProgramHandleArray\tabc"
-			],
-			[
-				"vec",
-				"vector2.h\t(input.h)"
 			],
 			[
 				"initi",
@@ -218,10 +282,6 @@
 			[
 				"glBind",
 				"glBindVertexArray\tabc"
-			],
-			[
-				"positi",
-				"positionData\tabc"
 			],
 			[
 				"Re",
@@ -454,76 +514,25 @@
 			[
 				"FRAGMENT_SHADER_FONT",
 				"FRAGMENT_SHADER_FONT_STATIC\t(shader_source.js)"
-			],
-			[
-				"VERTEX_SHADER_FONT",
-				"VERTEX_SHADER_FONT_STATIC\t(shader_source.js)"
-			],
-			[
-				"handleM",
-				"handleMouseUp\tabc"
-			],
-			[
-				"handel",
-				"handleMouseDown\tabc"
-			],
-			[
-				"charac",
-				"characterData\tabc"
-			],
-			[
-				"chara",
-				"characterData\tabc"
-			],
-			[
-				"enabl",
-				"enableVertexAttribArray\tabc"
-			],
-			[
-				"positionL",
-				"positionLocation\tabc"
-			],
-			[
-				"clien",
-				"clientX\tabc"
-			],
-			[
-				"generate",
-				"generateComponent\tabc"
-			],
-			[
-				"generateCom",
-				"generateComponentBuffer\t(joiner.js)"
-			],
-			[
-				"connec",
-				"connectDependencyUp\tabc"
-			],
-			[
-				"lin",
-				"lineBuffer\tabc"
-			],
-			[
-				"generateC",
-				"generateComponentsFromJSON\t(client.js)"
-			],
-			[
-				"gener",
-				"generateComponent\t(joiner.js)"
-			],
-			[
-				"omn",
-				"omni_list\tabc"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/external_context.h",
+			"file": "src/input.cpp",
 			"settings":
 			{
-				"buffer_size": 393,
+				"buffer_size": 866,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shaders/phong.fragment",
+			"settings":
+			{
+				"buffer_size": 863,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -533,42 +542,14 @@
 			"settings":
 			{
 				"buffer_size": 1018,
-				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/joiner.cpp",
+			"file": "src/examples/scavenger_hunt.cpp",
 			"settings":
 			{
-				"buffer_size": 1482,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/joiner.h",
-			"settings":
-			{
-				"buffer_size": 585,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/examples/no_tears.h",
-			"settings":
-			{
-				"buffer_size": 338,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/geometry.h",
-			"settings":
-			{
-				"buffer_size": 1201,
-				"encoding": "UTF-8",
+				"buffer_size": 3020,
 				"line_ending": "Windows"
 			}
 		},
@@ -581,10 +562,27 @@
 			}
 		},
 		{
+			"file": "src/geometry.h",
+			"settings":
+			{
+				"buffer_size": 1201,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shaders/phong.vertex",
+			"settings":
+			{
+				"buffer_size": 452,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "src/examples/lighting_test.cpp",
 			"settings":
 			{
-				"buffer_size": 228,
+				"buffer_size": 7396,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -593,25 +591,7 @@
 			"file": "src/examples/lighting_test.h",
 			"settings":
 			{
-				"buffer_size": 232,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/input.cpp",
-			"settings":
-			{
-				"buffer_size": 866,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/input.h",
-			"settings":
-			{
-				"buffer_size": 494,
+				"buffer_size": 1493,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -738,30 +718,32 @@
 	],
 	"file_history":
 	[
-		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/examples/scavenger_hunt.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/examples/scavenger_hunt.h",
-		"/C/Users/William Lew/Desktop/no_tears/shaders/avoid_uniform.vertex",
 		"/C/Users/William Lew/Desktop/no_tears/src/engine.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/project.sublime-project",
-		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/joiner.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.h",
 		"/C/Users/William Lew/Desktop/no_tears/src/geometry.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/shaders/phong.vertex",
+		"/C/Users/William Lew/Desktop/no_tears/shaders/phong.fragment",
 		"/C/Users/William Lew/Desktop/no_tears/src/geometry.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/engine.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/joiner.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/input.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/input.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/src/vector2.h",
-		"/C/Users/William Lew/Desktop/no_tears/src/vector2.cpp",
-		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.fragment",
-		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.vertex",
+		"/C/Users/William Lew/Desktop/no_tears/src/external_context.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/scavenger_hunt.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.h",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/basic.fragment",
 		"/C/Users/William Lew/Desktop/no_tears/shaders/basic.vertex",
+		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.fragment",
+		"/C/Users/William Lew/Desktop/no_tears/src/input.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/input.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/no_tears.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/joiner.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/joiner.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/src/external_context.h",
+		"/C/Users/William Lew/Desktop/no_tears/shaders/avoid_uniform.vertex",
+		"/C/Users/William Lew/Desktop/no_tears/project.sublime-project",
+		"/C/Users/William Lew/Desktop/no_tears/src/examples/lighting_test.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/src/engine.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/vector2.h",
+		"/C/Users/William Lew/Desktop/no_tears/src/vector2.cpp",
+		"/C/Users/William Lew/Desktop/no_tears/shaders/textured.vertex",
 		"/C/Users/William Lew/Desktop/no_tears/main.cpp",
 		"/C/Users/William Lew/Desktop/no_tears/old/src/engine.h",
 		"/C/Users/William Lew/Desktop/no_tears/old/src/engine.cpp",
@@ -847,6 +829,28 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"5",
+			"2",
+			"cube",
+			"cameraUp",
+			"cameraPosition",
+			"cameraFront",
+			"cameraYaw",
+			"cameraPitch",
+			"camera",
+			"5f",
+			"tempFront",
+			"cameraPitchRadians",
+			"cameraYawRadians",
+			"0.0f",
+			"front",
+			"1.0",
+			"0.0",
+			"viewM",
+			"modelMatrix",
+			"CubePhong",
+			"vec4",
+			"108",
 			"NoTears",
 			"vec",
 			"v",
@@ -939,37 +943,66 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/external_context.h",
+					"file": "src/input.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 393,
+						"buffer_size": 866,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								100,
-								100
+								318,
+								318
 							]
 						],
 						"settings":
 						{
-							"SL.43.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "shaders/phong.fragment",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								863,
+								863
+							]
+						],
+						"settings":
+						{
+							"SL.69.region_keys":
+							[
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "src/examples/scavenger_hunt.h",
 					"semi_transient": false,
 					"settings":
@@ -981,8 +1014,8 @@
 						"selection":
 						[
 							[
-								936,
-								936
+								725,
+								725
 							]
 						],
 						"settings":
@@ -994,92 +1027,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/joiner.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1482,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								589,
-								576
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "src/joiner.h",
+					"file": "src/examples/scavenger_hunt.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 585,
+						"buffer_size": 3020,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								585,
-								585
+								117,
+								117
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/examples/no_tears.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 338,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								136,
-								136
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/geometry.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								413,
+								413
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1095,46 +1101,42 @@
 						"selection":
 						[
 							[
-								403,
-								403
+								57,
+								57
 							]
 						],
 						"settings":
 						{
-							"SL.25.region_keys":
-							[
-							],
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 238.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "src/geometry.cpp",
+					"file": "shaders/phong.vertex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3865,
+						"buffer_size": 452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								498,
-								498
+								441,
+								441
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1155,48 +1157,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 228,
+						"buffer_size": 7396,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								138,
-								138
+								492,
+								492
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/examples/lighting_test.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 232,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								59,
-								59
-							]
-						],
-						"settings":
-						{
-							"SL.26.region_keys":
+							"SL.21.region_keys":
 							[
 							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
@@ -1209,25 +1183,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "src/input.cpp",
+					"buffer": 8,
+					"file": "src/examples/lighting_test.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 866,
+						"buffer_size": 1493,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								598,
-								598
+								178,
+								178
 							]
 						],
 						"settings":
 						{
-							"SL.35.region_keys":
+							"SL.42.region_keys":
 							[
 							],
 							"syntax": "Packages/C++/C++.sublime-syntax"
@@ -1236,38 +1210,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/input.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 494,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								116,
-								116
-							]
-						],
-						"settings":
-						{
-							"SL.36.region_keys":
-							[
-							],
-							"syntax": "Packages/C++/C++.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1317,7 +1260,7 @@
 	},
 	"output.exec":
 	{
-		"height": 82.0
+		"height": 97.0
 	},
 	"output.find_results":
 	{
@@ -1337,8 +1280,68 @@
 		"selected_items":
 		[
 			[
-				"sca",
+				"",
 				"src\\examples\\scavenger_hunt.h"
+			],
+			[
+				"g",
+				"src\\geometry.cpp"
+			],
+			[
+				"sca",
+				"src\\examples\\scavenger_hunt.cpp"
+			],
+			[
+				"en",
+				"src\\engine.cpp"
+			],
+			[
+				"geo",
+				"src\\geometry.cpp"
+			],
+			[
+				"phon",
+				"shaders\\phong.vertex"
+			],
+			[
+				"pon",
+				"shaders\\phong.fragment"
+			],
+			[
+				"inp",
+				"src\\input.cpp"
+			],
+			[
+				"eng",
+				"src\\engine.cpp"
+			],
+			[
+				"exter",
+				"src\\external_context.cpp"
+			],
+			[
+				"scav",
+				"src\\examples\\scavenger_hunt.h"
+			],
+			[
+				"san",
+				"src\\examples\\no_tears.cpp"
+			],
+			[
+				"engi",
+				"src\\engine.cpp"
+			],
+			[
+				"basi",
+				"shaders\\basic.fragment"
+			],
+			[
+				"frag",
+				"shaders\\textured.fragment"
+			],
+			[
+				"verte",
+				"shaders\\basic.vertex"
 			],
 			[
 				"search",
@@ -1357,10 +1360,6 @@
 				"src\\joiner.cpp"
 			],
 			[
-				"inp",
-				"src\\input.cpp"
-			],
-			[
 				"engin",
 				"src\\engine.cpp"
 			],
@@ -1373,24 +1372,8 @@
 				"no_tears\\project.sublime-project"
 			],
 			[
-				"geo",
-				"no_tears\\src\\geometry.h"
-			],
-			[
 				"ext",
 				"no_tears\\src\\external_context.cpp"
-			],
-			[
-				"eng",
-				"no_tears\\src\\engine.cpp"
-			],
-			[
-				"",
-				"no_tears\\src\\examples\\no_tears.h"
-			],
-			[
-				"en",
-				"no_tears\\src\\engine.cpp"
 			],
 			[
 				"tex",
@@ -1401,16 +1384,8 @@
 				"shaders\\basic.vertex"
 			],
 			[
-				"engi",
-				"src\\engine.cpp"
-			],
-			[
 				"ve",
 				"src\\vector2.h"
-			],
-			[
-				"exter",
-				"src\\external.cpp"
 			],
 			[
 				"sam",

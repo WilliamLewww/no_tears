@@ -15,7 +15,7 @@ void LightingTest::initialize(GLuint* shaderProgramHandleArray) {
 
 	projectionMatrix = glm::perspective(glm::radians(45.0f), 1920.0f / 1080.0f, 0.1f, 100.0f);
 
-	light.position = glm::vec3(-2.5f, 2.0f, -2.5f);
+	light.position = glm::vec3(0.0f, 1.5f, 0.0f);
 	light.color = glm::vec3(1.0f, 1.0f, 1.0f);
 
 	cubeCount = 4;
@@ -37,7 +37,13 @@ void LightingTest::initialize(GLuint* shaderProgramHandleArray) {
 	cubeList[3].translate(glm::vec3(0.0f, 1.0f, 0.0f));
 }
 
+float currentLightRotation = 0.0f;
 void LightingTest::update(Input* input, float elapsedTimeS) {
+	currentLightRotation += 0.001f;
+
+	light.position.x = 2.5f * sin(currentLightRotation);
+	light.position.z = 2.5f * cos(currentLightRotation);
+	
 	if (input->checkKeyDown(265)) {
 		camera.position += 0.05f * camera.front;
 	}
